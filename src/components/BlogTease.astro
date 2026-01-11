@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<h2 class="title-font">Collected Writings</h2>
+
+<div class="blog-tease">
+    {
+        posts.map((post) => (
+            <div class="blog-post">
+                <a href={post.url}>
+                    <h3 class="fancy-font">{post.data.title}</h3>
+                    <p>{post.data.description}</p>
+                </a>
+            </div>
+        ))
+    }
+</div>
+
+<style>
+    .blog-tease {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        cursor: pointer;
+    }
+    .blog-post {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .blog-post h3 {
+        margin-bottom: 0.5rem;
+    }
+    .blog-post p {
+        margin-bottom: 1rem;
+    }
+</style>

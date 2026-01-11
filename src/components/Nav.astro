@@ -1,0 +1,22 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<nav>
+    <div class="internal-links">
+        <HeaderLink class="title-font" href="/">Home</HeaderLink>
+        <HeaderLink class="title-font" href="/blog">Blog</HeaderLink>
+        <HeaderLink class="title-font" href="/about">About</HeaderLink>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+    }
+    .internal-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+</style>
