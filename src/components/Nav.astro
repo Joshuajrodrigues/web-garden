@@ -6,7 +6,6 @@ import HeaderLink from "./HeaderLink.astro";
     <div class="internal-links">
         <HeaderLink class="title-font" href="/">Garden</HeaderLink>
         <HeaderLink class="title-font" href="/work">Work</HeaderLink>
-        <HeaderLink class="title-font" href="/blog">Blog</HeaderLink>
         <HeaderLink class="title-font" href="/about">About</HeaderLink>
     </div>
 </nav>
@@ -14,10 +13,11 @@ import HeaderLink from "./HeaderLink.astro";
 <style>
     nav {
         display: flex;
+        margin-top: 1em;
     }
     .internal-links {
         display: flex;
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
         gap: 2rem;
     }
 </style>

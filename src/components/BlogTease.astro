@@ -1,43 +1,92 @@
 ---
 import { getCollection } from "astro:content";
-
+import tolstoy from "../images/logo2.jpg";
+import { Image } from "astro:assets";
 const posts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
-<h2 class="title-font">Collected Writings</h2>
+<h2 class="section-title runny-font">Collected Writings</h2>
 
-<div class="blog-tease">
-    {
-        posts.map((post) => (
-            <div class="blog-post">
-                <a href={post.url}>
-                    <h3 class="fancy-font">{post.data.title}</h3>
-                    <p>{post.data.description}</p>
-                </a>
-            </div>
-        ))
-    }
-</div>
+<section class="blog-tease">
+    <ol class="post-list">
+        {
+            posts.map((post) => (
+                <li class="blog-post title-font">
+                    <a href={post.url}>{post.data.title}</a>
+                </li>
+            ))
+        }
+    </ol>
+
+    <div class="aside-image">
+        <Image src={tolstoy} alt="Portrait of Leo Tolstoy" />
+    </div>
+</section>
 
 <style>
+    section-title {
+        margin: 4rem 0 2rem;
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
     .blog-tease {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* List */
+    .post-list {
+        padding-left: 2rem;
+    }
+
+    .blog-post {
+        margin-bottom: 1.25rem;
+        list-style-type: upper-roman;
         cursor: pointer;
     }
-    .blog-post {
-        border: 1px solid #ccc;
-        padding: 1rem;
-        border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+
     .blog-post h3 {
-        margin-bottom: 0.5rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+        font-weight: 400;
+        line-height: 1.3;
     }
-    .blog-post p {
-        margin-bottom: 1rem;
+
+    /* Links */
+    .blog-post a {
+        text-decoration: none;
+        color: var(--color-text);
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 0.1em;
+    }
+
+    .blog-post a:hover {
+        opacity: 0.75;
+    }
+
+    /* Image */
+    .aside-image {
+        display: none;
+    }
+
+    .aside-image img {
+        width: 100%;
+        height: auto;
+        opacity: 0.9;
+    }
+
+    /* Desktop enhancement */
+    @media (min-width: 768px) {
+        .blog-tease {
+            grid-template-columns: 3fr 2fr;
+        }
+
+        .aside-image {
+            display: block;
+            align-self: center;
+        }
     }
 </style>
