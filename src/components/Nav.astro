@@ -8,12 +8,31 @@ import HeaderLink from "./HeaderLink.astro";
         <HeaderLink class="title-font" href="/work">Work</HeaderLink>
         <HeaderLink class="title-font" href="/about">About</HeaderLink>
     </div>
+    <div>
+        <a class="mailto" href="mailto:hello@joshuarodrigues.dev"
+            >hello@joshuarodrigues.dev</a
+        >
+    </div>
 </nav>
 
 <style>
     nav {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         margin-top: 1em;
+    }
+    a.mailto {
+        color: var(--text);
+        background-color: var(--accent-link);
+        display: inline-block;
+        text-decoration: underline;
+        padding: 2px 8px;
+        font-size: clamp(1.3rem, 3vw, 1.5rem);
+        &:hover {
+            opacity: 0.8;
+        }
     }
     .internal-links {
         display: flex;

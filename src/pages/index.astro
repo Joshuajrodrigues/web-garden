@@ -1,17 +1,11 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import BlogTease from "../components/BlogTease.astro";
-import ProjectTease from "../components/ProjectTease.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
+import ProjectTease from "../components/ProjectTease.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
-import "@fontsource/unifrakturcook";
-import "@fontsource/jacquard-24-charted";
-import "@fontsource/pirata-one";
-import "@fontsource/ibm-plex-serif";
-// Supports weights 300-700
-import "@fontsource-variable/cormorant-garamond";
 ---
 
 <!doctype html>
@@ -38,7 +32,7 @@ import "@fontsource-variable/cormorant-garamond";
                 </p>
             </article>
             <BlogTease />
-            <!-- <ProjectTease /> -->
+            <ProjectTease />
             <Footer />
         </main>
     </body>

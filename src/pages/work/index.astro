@@ -1,0 +1,196 @@
+---
+import "@fontsource-variable/cormorant-garamond";
+import "@fontsource/ibm-plex-serif";
+import "@fontsource/jacquard-24-charted";
+import "@fontsource/pirata-one";
+import "@fontsource/unifrakturcook";
+
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Nav from "../../components/Nav.astro";
+
+import ProjectTease from "../../components/ProjectTease.astro";
+
+const startDate = new Date(2021, 7); // August 2021 (0-indexed)
+const now = new Date();
+
+let years =
+    now.getFullYear() -
+    startDate.getFullYear() -
+    (now.getMonth() < startDate.getMonth() ? 1 : 0);
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title="Work — Joshua"
+            description="my work profile as a frontend developer"
+        />
+    </head>
+
+    <body>
+        <main>
+            <Header />
+            <Nav />
+
+            <article class="work">
+                <header class="work-header">
+                    <div class="heading-row">
+                        <div class="actions">
+                            <a
+                                class="button primary runny-font"
+                                href="/resume/Joshua-Rodrigues-Resume-2024.pdf"
+                                target="_blank"
+                            >
+                                Download résumé
+                            </a>
+
+                            <a
+                                class="button icon"
+                                href="https://github.com/joshuajrodrigues"
+                                target="_blank"
+                                aria-label="GitHub profile"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.02c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.305-5.467-1.332-5.467-5.93 0-1.31.469-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.047.138 3 .404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.623-5.48 5.92.43.37.815 1.096.815 2.21v3.285c0 .322.216.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="intro">
+                        I’m a senior frontend engineer based in Goa, with over {
+                            years
+                        }+ years of professional experience working on the web.
+                    </p>
+
+                    <p class="intro">
+                        My work focuses on building thoughtful, well-structured
+                        interfaces that balance clarity, performance, and
+                        long-term maintainability.
+                    </p>
+
+                    <p class="intro">
+                        Much of my work happens privately, within teams and
+                        organizations. What’s collected here is necessarily
+                        selective.
+                    </p>
+                </header>
+
+                <figure class="work-image">
+                    <!-- Optional image later -->
+                </figure>
+            </article>
+            <ProjectTease />
+            <Footer />
+        </main>
+    </body>
+</html>
+<style>
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        background-color: var(--bg);
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    .work {
+        display: grid;
+        gap: 3rem;
+        margin: 4rem 0;
+    }
+
+    .work-header {
+        max-width: 60ch;
+    }
+
+    .work h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .intro {
+        margin-bottom: 1rem;
+    }
+
+    .actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    /* Buttons */
+    .button {
+        padding: 0.6rem 1rem;
+        text-decoration: none;
+        border: 1px solid currentColor;
+    }
+
+    .button.primary {
+        background: var(--color-text);
+        color: var(--bg);
+    }
+
+    .button.icon {
+        color: var(--color-text);
+    }
+
+    .button:hover {
+        opacity: 0.85;
+    }
+
+    /* Image */
+    .work-image img {
+        width: 100%;
+        max-width: 420px;
+        opacity: 0.9;
+    }
+    .heading-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .actions {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    /* Resume button */
+    .button.primary {
+        font-size: 1.8rem;
+        padding: 0.65rem 1.1rem;
+    }
+
+    /* GitHub icon button */
+    .button.icon {
+        padding: 1rem;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button.icon:hover {
+        opacity: 0.85;
+    }
+    /* Desktop */
+    @media (min-width: 768px) {
+        .work {
+            grid-template-columns: 3fr 2fr;
+            align-items: start;
+        }
+    }
+</style>
