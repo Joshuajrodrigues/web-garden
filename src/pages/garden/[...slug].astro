@@ -1,0 +1,48 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import GardenPost from "../../layouts/GardenPost.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("garden");
+    return posts.map((post) => ({
+        // Map the 'url' from your frontmatter to the URL slug
+        params: { slug: post.data.url || post.id },
+        props: post,
+    }));
+}
+
+type Props = CollectionEntry<"garden">;
+
+const post = Astro.props;
+const { Content } = await render(post);
+
+const allNotes = await getCollection("garden");
+const backlinks = allNotes.filter(
+    (n) =>
+        n.id !== post.id && // Don't link to itself
+        (n.body?.includes(`[[${post.id}]]`) ||
+            n.body?.includes(post.data.title)),
+);
+---
+
+<GardenPost {...post.data}>
+    <Content />
+
+    {
+        backlinks.length > 0 && (
+            <div class="backlinks-section">
+                <hr />
+                <h4>Linked Mentions</h4>
+                <ul>
+                    {backlinks.map((link) => (
+                        <li>
+                            <a href={`/garden/${link.data.url || link.id}`}>
+                                {link.data.title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        )
+    }
+</GardenPost>
