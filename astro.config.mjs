@@ -6,9 +6,6 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    resolve: { preserveSymlinks: true },
-  },
-  site: "https://example.com",
+  site: "https://beta.joshuarodrigues.dev",
   integrations: [mdx(), sitemap()],
 });
