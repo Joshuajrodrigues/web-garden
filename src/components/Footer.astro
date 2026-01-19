@@ -8,7 +8,7 @@ const today = new Date();
     </h4>
     <div class="title-font">
         <small>
-            Contact : <a mail-to="mailto:hello@joshuarodrigues.dev"
+            Contact : <a href="mailto:hello@joshuarodrigues.dev"
                 >hello@joshuarodrigues.dev</a
             >
         </small>
@@ -28,6 +28,13 @@ const today = new Date();
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+    }
+    a {
+        color: var(--text);
+        background-color: var(--accent-link);
+        display: inline-block;
+        text-decoration: none;
+        padding: 2px 8px;
     }
     .made-with {
         display: flex;
