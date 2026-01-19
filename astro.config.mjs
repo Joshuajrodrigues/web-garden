@@ -3,9 +3,18 @@
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
+import wikiLinkPlugin from "remark-wiki-link";
 
 // https://astro.build/config
 export default defineConfig({
+  markdown: {
+    remarkPlugins: [
+      [wikiLinkPlugin, { 
+        aliasDivider: '|',
+        hrefTemplate: (/** @type {string} */permalink) => `/garden/${permalink}`.toLowerCase()
+      }]
+    ],
+  },
   site: "https://beta.joshuarodrigues.dev",
   integrations: [mdx(), sitemap()],
 });

@@ -7,3 +7,5 @@ heroImage: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Martin
 ---
 
 Coming soon
+
+I actually talk more about my philosophy in [[digital-romanticism|digital romanticism]]. 

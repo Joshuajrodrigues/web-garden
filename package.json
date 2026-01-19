@@ -18,6 +18,7 @@
     "@fontsource/pirata-one": "^5.2.8",
     "@fontsource/unifrakturcook": "^5.2.8",
     "astro": "^5.16.11",
+    "remark-wiki-link": "^2.0.1",
     "sharp": "^0.34.3"
   }
 }

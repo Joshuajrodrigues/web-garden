@@ -5,7 +5,6 @@ import GardenPost from "../../layouts/GardenPost.astro";
 export async function getStaticPaths() {
     const posts = await getCollection("garden");
     return posts.map((post) => ({
-        // Map the 'url' from your frontmatter to the URL slug
         params: { slug: post.data.url || post.id },
         props: post,
     }));
@@ -16,33 +15,85 @@ type Props = CollectionEntry<"garden">;
 const post = Astro.props;
 const { Content } = await render(post);
 
-const allNotes = await getCollection("garden");
-const backlinks = allNotes.filter(
-    (n) =>
-        n.id !== post.id && // Don't link to itself
-        (n.body?.includes(`[[${post.id}]]`) ||
-            n.body?.includes(post.data.title)),
+// --- BACKLINKS ---
+const allNotes = await getCollection('garden');
+const currentSlug = post.data.url || post.id;
+
+// Regex: Find [[slug]] or [[slug|alias]], case-insensitive
+const linkPattern = new RegExp(`\\[\\[${currentSlug}(\\|.*?)?\\]\\]`, 'i');
+
+const backlinks = allNotes.filter(note => 
+  note.id !== post.id && 
+  linkPattern.test(note.body || '') 
 );
 ---
 
 <GardenPost {...post.data}>
-    <Content />
+    <article class="garden-content">
+        <Content />
+    </article>
 
-    {
-        backlinks.length > 0 && (
-            <div class="backlinks-section">
-                <hr />
-                <h4>Linked Mentions</h4>
-                <ul>
-                    {backlinks.map((link) => (
-                        <li>
-                            <a href={`/garden/${link.data.url || link.id}`}>
-                                {link.data.title}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        )
-    }
+    {backlinks.length > 0 && (
+        <section class="backlinks-container">
+            <hr />
+            <h4 class="backlinks-title fancy-font">Linked Mentions</h4>
+            <ol class="backlinks-list ">
+                {backlinks.map((link) => (
+                    <li>
+                        <a href={`/garden/${link.data.url || link.id}`}>
+                            {link.data.title}
+                        </a>
+                    </li>
+                ))}
+            </ol>
+        </section>
+    )}
 </GardenPost>
+
+<style>
+    
+    .garden-content {
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+
+    /* Backlinks Section */
+    .backlinks-container {
+        margin-top: 4rem;
+    }
+
+    .backlinks-title {
+        
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+   
+    .backlinks-list {
+        list-style-type:upper-roman;
+        padding-left: 1.5rem;
+    }
+
+    .backlinks-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    .backlinks-list a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: opacity 0.2s ease;
+    }
+
+    .backlinks-list a:hover {
+        opacity: 0.7;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 2rem 0;
+    }
+</style>

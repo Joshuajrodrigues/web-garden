@@ -9,3 +9,4 @@ heroImage: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/John_Martin
 Digital Romanticism is a term I'd like to coin as an approach to computing that focuses more on the organic relationship between human and their technologies.
 
 This contrasts with the current trend of technological degradation in some areas resulting from disregard of human identity and the need to personalize.
+
