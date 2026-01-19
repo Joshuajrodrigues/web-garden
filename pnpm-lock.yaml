@@ -35,6 +35,9 @@ importers:
       astro:
         specifier: ^5.16.11
         version: 5.16.11(rollup@4.55.2)(typescript@5.9.3)
+      html-escaper:
+        specifier: ^3.0.3
+        version: 3.0.3
       sharp:
         specifier: ^0.34.3
         version: 0.34.5
