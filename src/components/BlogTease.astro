@@ -14,7 +14,7 @@ const posts = (await getCollection("garden")).sort(
         {
             posts.map((post) => (
                 <li class="blog-post title-font">
-                    <a href={"/garden/" + post.id}>{post.data.title}</a>
+                    <a href={"/garden/" + post.data.url}>{post.data.title}</a>
                 </li>
             ))
         }

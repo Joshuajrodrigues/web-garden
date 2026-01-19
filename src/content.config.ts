@@ -8,6 +8,7 @@ const garden = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      url: z.string().optional(),
       description: z.string().optional(), // Made optional for easier notes
       pubDate: z.coerce.date().optional(),
       updatedDate: z.coerce.date().optional(),
