@@ -1,9 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("garden")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = await getCollection("garden");
 ---
 
 <h2 class="title-font">Selected Works</h2>
@@ -12,9 +10,8 @@ const posts = (await getCollection("garden")).sort(
     {
         posts.map((post) => (
             <div class="blog-post">
-                <a href={post.data.url}>
-                    <h3 class=" title-font">{post.data.title}</h3>
-                    <p>{post.data.description}</p>
+                <a href={post.id}>
+                    <h3 class=" title-font">{post.id}</h3>
                 </a>
             </div>
         ))

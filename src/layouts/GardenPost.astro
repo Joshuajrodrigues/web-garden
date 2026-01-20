@@ -9,12 +9,12 @@ import Nav from "../components/Nav.astro";
 
 type Props = CollectionEntry<"garden">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, tags, hero } = Astro.props;
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title={title} description={description||""} />
+        <BaseHead title={title} description={description} />
     </head>
 
     <body>
@@ -25,24 +25,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                     <div class="title">
                         <div class="date">
                             <h1>{title}</h1>
-                            <FormattedDate date={pubDate} />
-                            {
-                                updatedDate && (
-                                    <div class="last-updated-on">
-                                        Last updated on{" "}
-                                        <FormattedDate date={updatedDate} />
-                                    </div>
-                                )
-                            }
                         </div>
                     </div>
                     <div class="hero-image">
                         {
-                            heroImage && (
+                            hero && (
                                 <Image
                                     width={1020}
                                     height={510}
-                                    src={heroImage}
+                                    src={hero}
                                     alt=""
                                 />
                             )
@@ -62,14 +53,20 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         padding: 0 24px;
         background-color: var(--bg);
     }
+
     .hero-image {
         width: 100%;
+        margin-bottom: 2em; /* Added some spacing */
     }
     .hero-image img {
         display: block;
         margin: 0 auto;
-
+        border-radius: 12px;
         box-shadow: var(--box-shadow);
+
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
     }
     .prose {
         width: 720px;

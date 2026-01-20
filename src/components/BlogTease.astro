@@ -2,9 +2,7 @@
 import { getCollection } from "astro:content";
 import tolstoy from "../images/logo2.jpg";
 import { Image } from "astro:assets";
-const posts = (await getCollection("garden")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = await getCollection("garden");
 ---
 
 <h2 class="section-title runny-font">Collected Writings</h2>
@@ -14,7 +12,7 @@ const posts = (await getCollection("garden")).sort(
         {
             posts.map((post) => (
                 <li class="blog-post title-font">
-                    <a href={"/garden/" + post.data.url}>{post.data.title}</a>
+                    <a href={"/garden/" + post.id}>{post.data.title}</a>
                 </li>
             ))
         }

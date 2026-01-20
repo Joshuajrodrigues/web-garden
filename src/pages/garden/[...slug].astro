@@ -5,7 +5,7 @@ import GardenPost from "../../layouts/GardenPost.astro";
 export async function getStaticPaths() {
     const posts = await getCollection("garden");
     return posts.map((post) => ({
-        params: { slug: post.data.url || post.id },
+        params: { slug: post.id },
         props: post,
     }));
 }
@@ -16,15 +16,14 @@ const post = Astro.props;
 const { Content } = await render(post);
 
 // --- BACKLINKS ---
-const allNotes = await getCollection('garden');
-const currentSlug = post.data.url || post.id;
+const allNotes = await getCollection("garden");
+const currentSlug = post.id;
 
 // Regex: Find [[slug]] or [[slug|alias]], case-insensitive
-const linkPattern = new RegExp(`\\[\\[${currentSlug}(\\|.*?)?\\]\\]`, 'i');
+const linkPattern = new RegExp(`\\[\\[${currentSlug}(\\|.*?)?\\]\\]`, "i");
 
-const backlinks = allNotes.filter(note => 
-  note.id !== post.id && 
-  linkPattern.test(note.body || '') 
+const backlinks = allNotes.filter(
+    (note) => note.id !== post.id && linkPattern.test(note.body || ""),
 );
 ---
 
@@ -33,25 +32,24 @@ const backlinks = allNotes.filter(note =>
         <Content />
     </article>
 
-    {backlinks.length > 0 && (
-        <section class="backlinks-container">
-            <hr />
-            <h4 class="backlinks-title fancy-font">Linked Mentions</h4>
-            <ol class="backlinks-list ">
-                {backlinks.map((link) => (
-                    <li>
-                        <a href={`/garden/${link.data.url || link.id}`}>
-                            {link.data.title}
-                        </a>
-                    </li>
-                ))}
-            </ol>
-        </section>
-    )}
+    {
+        backlinks.length > 0 && (
+            <section class="backlinks-container">
+                <hr />
+                <h4 class="backlinks-title fancy-font">Linked Mentions</h4>
+                <ol class="backlinks-list ">
+                    {backlinks.map((link) => (
+                        <li>
+                            <a href={`/garden/${link.id}`}>{link.data.title}</a>
+                        </li>
+                    ))}
+                </ol>
+            </section>
+        )
+    }
 </GardenPost>
 
 <style>
-    
     .garden-content {
         line-height: 1.6;
         margin-bottom: 3rem;
@@ -63,16 +61,14 @@ const backlinks = allNotes.filter(note =>
     }
 
     .backlinks-title {
-        
         font-size: 1.25rem;
         margin-bottom: 1rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
 
-   
     .backlinks-list {
-        list-style-type:upper-roman;
+        list-style-type: upper-roman;
         padding-left: 1.5rem;
     }
 

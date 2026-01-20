@@ -4,15 +4,11 @@ import { glob } from "astro/loaders";
 
 const garden = defineCollection({
   loader: glob({ base: "./src/content/garden", pattern: "**/*.{md,mdx}" }),
- 
   schema: z.object({
-    title: z.string(),
-    url: z.string().optional(),
-    description: z.string().optional(),
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(), 
     tags: z.array(z.string()).optional(),
+    title: z.string().min(1).max(100),
+    description: z.string().min(1).max(200),
+    hero: z.string().url().optional(),
   }),
 });
 
