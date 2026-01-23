@@ -24,4 +24,7 @@ export default defineConfig({
   },
   site: "https://beta.joshuarodrigues.dev",
   integrations: [mdx(), sitemap()],
+  build: {
+    format: "file", // This forces /404 to be 404.html
+  },
 });
