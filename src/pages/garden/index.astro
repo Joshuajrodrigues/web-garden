@@ -3,9 +3,9 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
-import FormattedDate from "../../components/FormattedDate.astro";
 import Header from "../../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+import Nav from "../../components/Nav.astro";
 
 const posts = await getCollection("garden");
 ---
@@ -14,94 +14,43 @@ const posts = await getCollection("garden");
 <html lang="en">
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-        <style>
-            main {
-                width: 960px;
-            }
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
-            ul li {
-                width: calc(50% - 1rem);
-            }
-            ul li * {
-                text-decoration: none;
-                transition: 0.2s ease;
-            }
-            ul li:first-child {
-                width: 100%;
-                margin-bottom: 1rem;
-                text-align: center;
-            }
-            ul li:first-child img {
-                width: 100%;
-            }
-            ul li:first-child .title {
-                font-size: 2.369rem;
-            }
-            ul li img {
-                margin-bottom: 0.5rem;
-                border-radius: 12px;
-            }
-            ul li a {
-                display: block;
-            }
-            .title {
-                margin: 0;
-                color: rgb(var(--black));
-                line-height: 1;
-            }
-            .date {
-                margin: 0;
-                color: rgb(var(--gray));
-            }
-            ul li a:hover h4,
-            ul li a:hover .date {
-                color: rgb(var(--accent));
-            }
-            ul a:hover img {
-                box-shadow: var(--box-shadow);
-            }
-            @media (max-width: 720px) {
-                ul {
-                    gap: 0.5em;
-                }
-                ul li {
-                    width: 100%;
-                    text-align: center;
-                }
-                ul li:first-child {
-                    margin-bottom: 0;
-                }
-                ul li:first-child .title {
-                    font-size: 1.563em;
-                }
-            }
-        </style>
     </head>
     <body>
-        <Header />
+
         <main>
+            <Nav/>
+            <header class="garden-intro">
+                <h1 class="runny-font xl">The Garden</h1>
+                <p>A collection of thoughts, notes, and digital seedlings.</p>
+            </header>
+
             <section>
-                <ul>
+                <ul class="garden-grid">
                     {
                         posts.map((post) => (
-                            <li>
+                            <li class="garden-card">
                                 <a href={`/garden/${post.id}/`}>
-                                    {post.data.hero && (
-                                        <Image
-                                            width={720}
-                                            height={360}
-                                            src={post.data.hero}
-                                            alt=""
-                                        />
-                                    )}
-                                    <h4 class="title">{post.data.title}</h4>
+                                    <div class="card-image-wrapper">
+                                        {post.data.hero && (
+                                            <Image
+                                                width={720}
+                                                height={480}
+                                                src={post.data.hero}
+                                                alt=""
+                                                class="card-image"
+                                            />
+                                        )}
+                                        <div class="card-overlay">
+                                            {post.data.tags && (
+                                                <div class="card-tags">
+                                                    {post.data.tags.slice(0, 2).map(tag => (
+                                                        <span>#{tag}</span>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <h4 class="title title-font">{post.data.title}</h4>
                                 </a>
                             </li>
                         ))
@@ -112,3 +61,114 @@ const posts = await getCollection("garden");
         <Footer />
     </body>
 </html>
+
+<style>
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .garden-intro {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .garden-intro h1 {
+        margin: 0;
+        line-height: 1;
+    }
+
+    .garden-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2.5rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .garden-card a {
+        text-decoration: none;
+        display: block;
+        group;
+    }
+
+    .card-image-wrapper {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        background: var(--color-border-light);
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.3s ease;
+    }
+
+    /* Hover Effects */
+    .garden-card:hover .card-image-wrapper {
+        transform: translateY(-8px);
+    }
+
+    .garden-card:hover .title {
+        color: var(--color-text-mid);
+    }
+
+    .card-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 40%);
+        display: flex;
+        align-items: flex-end;
+        padding: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .garden-card:hover .card-overlay {
+        opacity: 1;
+    }
+
+    .card-tags {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .card-tags span {
+        font-size: 0.75rem;
+        color: white;
+        background: rgba(0,0,0,0.5);
+        padding: 2px 8px;
+        border-radius: 4px;
+        backdrop-filter: blur(2px);
+    }
+
+    .title {
+        margin: 0;
+        color: var(--color-text);
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 720px) {
+        .garden-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .xl {
+            font-size: 4rem;
+        }
+
+        .card-image-wrapper {
+            aspect-ratio: 16 / 9;
+        }
+    }
+</style>

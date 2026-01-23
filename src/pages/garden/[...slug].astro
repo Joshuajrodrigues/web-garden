@@ -32,31 +32,73 @@ const backlinks = allNotes.filter((note) => {
     if (note.id === post.id) return false;
     return linkPattern.test(note.body || "");
 });
+
+const outlinkMatches = post.body?.matchAll(/\[\[(.*?)(?:\|.*?)?\]\]/g) || [];
+const outlinkIds = [
+    ...new Set(
+        Array.from(outlinkMatches).map((match) =>
+            match[1].trim().replace(/ /g, "-").toLowerCase(),
+        ),
+    ),
+];
+const outlinks = allNotes.filter((note) => outlinkIds.includes(note.id));
 ---
 
-<GardenPost {...post.data}>
+<GardenPost {...post.data}> 
     <article class="garden-content">
         <Content />
     </article>
 
-    {
-        backlinks.length > 0 && (
-            <section class="backlinks-container">
-                <hr />
-                <h4 class="backlinks-title fancy-font">Linked Mentions</h4>
-                <ol class="backlinks-list ">
-                    {backlinks.map((link) => (
-                        <li>
-                            <a href={`/garden/${link.id}`}>{link.data.title}</a>
-                        </li>
-                    ))}
-                </ol>
-            </section>
-        )
-    }
+    <footer class="library-connections">
+        {
+            outlinks.length > 0 && (
+                <section class="links-section">
+                    <hr />
+                    <h4 class="fancy-font">References in this note</h4>
+                    <ol class="roman-list">
+                        {outlinks.map((link) => (
+                            <li>
+                                <a href={`/garden/${link.id}`}>
+                                    {link.data.title}
+                                </a>
+                            </li>
+                        ))}
+                    </ol>
+                </section>
+            )
+        }
+
+        {
+            backlinks.length > 0 && (
+                <section class="links-section">
+                    <hr />
+                    <h4 class="fancy-font">Linked Mentions (Backlinks)</h4>
+                    <ol class="roman-list">
+                        {backlinks.map((link) => (
+                            <li>
+                                <a href={`/garden/${link.id}`}>
+                                    {link.data.title}
+                                </a>
+                            </li>
+                        ))}
+                    </ol>
+                </section>
+            )
+        }
+    </footer>
 </GardenPost>
 
 <style>
+    .library-connections {
+        margin-top: 5rem;
+    }
+    .links-section {
+        margin-bottom: 3rem;
+    }
+    .roman-list {
+        list-style-type: lower-roman;
+        padding-left: 1.5rem;
+    }
     .garden-content {
         line-height: 1.6;
         margin-bottom: 3rem;

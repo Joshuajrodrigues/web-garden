@@ -1,0 +1,126 @@
+---
+import { Image } from "astro:assets";
+import BaseHead from "../components/BaseHead.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+// For remote images in Astro, you must provide dimensions or use an unoptimized prop
+const magritteUrl =
+    "https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg";
+---
+
+<html lang="en">
+    <head>
+        <BaseHead
+            title="404: Not Found"
+            description="This page does not exist."
+        />
+    </head>
+    <body>
+        <main>
+            <Nav />
+            <div class="art-container">
+                <Image
+                    src={magritteUrl}
+                    alt="The Son of Man by René Magritte"
+                    width={400}
+                    height={500}
+                    class="painting"
+                />
+                <cite class="citation">
+                    René Magritte, <em>The Son of Man</em> (1964). Oil on canvas.
+                    <span class="source">Source: Wikimedia Commons</span>
+                </cite>
+            </div>
+            <div class="error-wrapper">
+                <div class="content">
+                    <h1>404</h1>
+                    <p>
+                        Hey looks like the note your looking for isnt added by
+                        me yet.
+                    </p>
+                    <p>
+                        This happens as I sometimes have an idea for a note and
+                        keep it as an open link to remind me to come back to it.
+                    </p>
+                    <p>
+                        If it's a topic you are intrested in or wanna talk about
+                        <a href="mailto:hello@joshuarodrigues.dev">
+                            do write to me.
+                        </a>
+                    </p>
+                    <button class="button" onclick="history.back()">
+                        Back to previous page</button
+                    >
+                </div>
+            </div>
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style>
+    .error-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    /* Restricting the image size to roughly 1/4 of the viewport height */
+    .art-container {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .painting {
+        max-height: 35vh; /* Limits the image to roughly 1/3 to 1/4 of the page height */
+        width: auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 8px solid #fff; /* Classic frame look */
+    }
+
+    .citation {
+        font-size: 0.75rem;
+        color: #666;
+        font-family: sans-serif;
+        max-width: 300px;
+    }
+
+    .content h1 {
+        font-size: clamp(3rem, 10vw, 6rem);
+        margin: 0;
+        color: var(--text-color);
+        font-weight: 300;
+    }
+
+    .content p {
+        font-family: serif;
+        font-style: italic;
+        font-size: 1.25rem;
+        margin: 1rem 0 2rem;
+        color: #444;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background-color: var(--bg);
+        border: 1px solid var(--color-text);
+        cursor: pointer;
+        backdrop-filter: blur(4px);
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .button:hover {
+        opacity: 0.5;
+    }
+</style>

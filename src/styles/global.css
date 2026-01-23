@@ -39,6 +39,12 @@ body {
 .xl {
     font-size: 6rem;
 }
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 24px;
+    background-color: var(--bg);
+}
 
 h1 {
     color: var(--text-primary);
