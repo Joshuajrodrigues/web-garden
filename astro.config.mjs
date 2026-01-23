@@ -9,10 +9,17 @@ import wikiLinkPlugin from "remark-wiki-link";
 export default defineConfig({
   markdown: {
     remarkPlugins: [
-      [wikiLinkPlugin, { 
-        aliasDivider: '|',
-        hrefTemplate: (/** @type {string} */permalink) => `/garden/${permalink}`.toLowerCase()
-      }]
+      [
+        wikiLinkPlugin,
+        {
+          aliasDivider: "|",
+          pageResolver: (/** @type {string} */ name) => [
+            name.replace(/ /g, "-").toLowerCase(),
+          ],
+          hrefTemplate: (/** @type {string} */ permalink) =>
+            `/garden/${permalink}`.toLowerCase(),
+        },
+      ],
     ],
   },
   site: "https://beta.joshuarodrigues.dev",

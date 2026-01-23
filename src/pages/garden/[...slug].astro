@@ -17,14 +17,21 @@ const { Content } = await render(post);
 
 // --- BACKLINKS ---
 const allNotes = await getCollection("garden");
-const currentSlug = post.id;
+const currentId = post.id; //  "arch-linux"
+const currentTitle = post.data.title; // "My Arch Linux setup"
 
-// Regex: Find [[slug]] or [[slug|alias]], case-insensitive
-const linkPattern = new RegExp(`\\[\\[${currentSlug}(\\|.*?)?\\]\\]`, "i");
+const idPattern = currentId.replace(/-/g, "[ -]");
+const titlePattern = currentTitle.replace(/-/g, "[ -]");
 
-const backlinks = allNotes.filter(
-    (note) => note.id !== post.id && linkPattern.test(note.body || ""),
+const linkPattern = new RegExp(
+    `\\[\\[(${idPattern}|${titlePattern})(\\|.*?)?\\]\\]`,
+    "i",
 );
+
+const backlinks = allNotes.filter((note) => {
+    if (note.id === post.id) return false;
+    return linkPattern.test(note.body || "");
+});
 ---
 
 <GardenPost {...post.data}>

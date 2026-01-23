@@ -11,7 +11,7 @@ const posts = await getCollection("garden");
     <ol class="post-list">
         {
             posts.map((post) => (
-                <li class="blog-post title-font">
+                <li class="blog-post ">
                     <a href={"/garden/" + post.id}>{post.data.title}</a>
                 </li>
             ))
@@ -34,11 +34,6 @@ const posts = await getCollection("garden");
         grid-template-columns: 1fr;
         gap: 2rem;
         align-items: start;
-    }
-
-    /* List */
-    .post-list {
-        padding-left: 2rem;
     }
 
     .blog-post {

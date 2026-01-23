@@ -17,7 +17,7 @@ body {
     background: var(--bg);
     background-size: 100% 600px;
 
-    color: var(--text-normal);
+    color: var(--color-text);
     font-size: 24px;
     line-height: 1.7;
 }
@@ -69,10 +69,32 @@ pre {
 
 /* BLOCKQUOTE -------------------------------------------------- */
 blockquote {
-    border-left: 4px solid var(--accent);
-    color: var(--text-normal);
+    position: relative;
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--color-text);
 }
 
+blockquote::before {
+    content: "“";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 4rem;
+    color: var(--color-text-mid);
+    opacity: 0.2;
+}
+
+blockquote footer {
+    margin-top: 1rem;
+    font-style: normal;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
 /* HR -------------------------------------------------- */
 hr {
     border-top: 1px solid #3c3836;
