@@ -147,7 +147,6 @@ const { title, description, tags, hero } = Astro.props;
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
         padding: 3rem 2rem;
         z-index: 3;
         color: white;
@@ -207,5 +206,41 @@ const { title, description, tags, hero } = Astro.props;
             opacity: 1;
             transform: translateY(0);
         }
+    }
+    /* 1. Animation for the Title */
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero-content h1 {
+        animation: slideInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* 2. The "Breakout" CSS for images inside Markdown <p> tags */
+    .prose :global(p:has(img[title="section-image"])) {
+        /* Force the parent <p> to be full width */
+        width: 100%;
+
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        padding: 0;
+        line-height: 0; /* Removes weird gaps at the bottom of images */
+    }
+
+    .prose :global(img[title="section-image"]) {
+        width: 100%;
+        max-height: 700px; /* Or whatever height you prefer */
+        border-radius: 20px;
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        display: block;
     }
 </style>
