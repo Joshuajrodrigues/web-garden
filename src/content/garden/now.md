@@ -20,7 +20,11 @@ I'm reading <mark style="background:#d3f8b6">A Quiet Place by Seicho Matsumoto.<
 
 I've been listening to _**Ego Death at a Bachelorette Party**_  by Hayley Williams.
 
+## Movies
+
+I recently watched 28 years later. I think it was coool. 🧟‍♂️
+
 ## Work
 
-Currently I work as a senior software engineer at <mark style="background:#fff88f">Onstro</mark>
+I work as a senior software engineer at <mark style="background:#fff88f">Onstro</mark> . I'm a Front-end Engineer there.
 
