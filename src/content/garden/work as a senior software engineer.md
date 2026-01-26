@@ -7,7 +7,7 @@ hero: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Philipp_Jakob_Lo
 ---
 I began working professionally since **Aug 2021**. Straight out of engineering college even before my degree reached my doorstep. (Degrees here come through postal service ). 
 
-Since then, I have progressed from a **Trainee** to Junior, then Software Engineer, and I am now serving as a **Senior Software Engineer**. My core expertise lies in the frontend ecosystem, specifically crafting robust interfaces with **JavaScript, React, Vue, Astro, Svelte and Next.js**.
+Since then, I have progressed from a Trainee to Junior, then Software Engineer, and I am now serving as a **Senior Software Engineer**. My core expertise lies in the frontend ecosystem, specifically crafting robust interfaces with **JavaScript, React, Vue, Astro, Svelte and Next.js**.
 
 I love planning cool stuff, my experience so far has been in building enterprise web apps that help users like scientists and government officials get their work done.
 

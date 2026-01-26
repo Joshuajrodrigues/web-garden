@@ -2,6 +2,7 @@
 tags:
   - work
   - experiments
+  - work-project
 title: Design Systems & Component Architecture
 description: Reflections on building scalable UI patterns for enterprise-grade research ecosystems.
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/An_der_Ruegener_Kueste_-_Eugen_Bracht.jpg/1280px-An_der_Ruegener_Kueste_-_Eugen_Bracht.jpg

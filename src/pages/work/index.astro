@@ -6,7 +6,7 @@ import "@fontsource/pirata-one";
 import "@fontsource/unifrakturcook";
 
 import { Image } from "astro:assets";
-
+import Layout from "../../layouts/GardenPost.astro";
 import contact from "../../images/contact.jpg";
 
 import BaseHead from "../../components/BaseHead.astro";
@@ -25,82 +25,61 @@ let years =
     (now.getMonth() < startDate.getMonth() ? 1 : 0);
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <BaseHead
-            title="Work — Joshua"
-            description="my work profile as a frontend developer"
-        />
-    </head>
-
-    <body>
-        <main>
-            <Header />
-            <Nav />
-
-            <article class="work">
-                <header class="work-header">
-                    <div class="heading-row">
-                        <div class="actions">
-                            <a
-                                class="button primary runny-font"
-                                href="/resume/Joshua-Rodrigues-Resume-2024.pdf"
-                                target="_blank"
-                            >
-                                Download résumé
-                            </a>
-
-                            <a
-                                class="button icon"
-                                href="https://github.com/joshuajrodrigues"
-                                target="_blank"
-                                aria-label="GitHub profile"
-                            >
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    width="18"
-                                    height="18"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.02c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.305-5.467-1.332-5.467-5.93 0-1.31.469-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.005 2.047.138 3 .404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.623-5.48 5.92.43.37.815 1.096.815 2.21v3.285c0 .322.216.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"
-                                    ></path>
-                                </svg>
-                            </a>
-                        </div>
+<Layout
+    title="My work and experience over the years"
+    description="Work experience summary for hiring managers (hr's) and recuirmtment agents"
+    hero="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/John_Martin_-_The_Great_Day_of_His_Wrath_-_Google_Art_Project.jpg/2560px-John_Martin_-_The_Great_Day_of_His_Wrath_-_Google_Art_Project.jpg"
+>
+    <main>
+        <article class="work-intro">
+            <header class="work-header">
+                <div class="heading-row">
+                    <div class="actions">
+                        <a
+                            class="button primary"
+                            href="/resume/Joshua-Rodrigues-Resume-2024.pdf"
+                            target="_blank">Résumé</a
+                        >
                     </div>
+                </div>
 
-                    <p class="intro">
-                        I’m a senior frontend engineer based in Goa, with over {
-                            years
-                        }+ years of professional experience working on the web.
+                <p class="big-intro">
+                    I’m a <strong>Senior Frontend Engineer</strong> based in Goa,
+                    with {years}+ years of experience building specialized
+                    systems for scientists, researchers, and government
+                    officials.
+                </p>
+
+                <div class="experience-cta">
+                    <p>
+                        For a detailed breakdown of my career path and the tech
+                        stacks I've mastered:
                     </p>
+                    <a href="garden/work-experience"
+                        >Read my full professional narrative →</a
+                    >
+                </div>
+            </header>
 
-                    <p class="intro">
-                        My work focuses on building thoughtful, well-structured
-                        interfaces that balance clarity, performance, and
-                        long-term maintainability.
-                    </p>
+            <aside class="tech-stack">
+                <h3 class="title-font">Core Tools</h3>
+                <ul>
+                    <li>Javascript / Typescript</li>
+                    <li>React / Next.js</li>
+                    <li>Astro / Svelte</li>
+                    <li>HTML / CSS</li>
+                    <li>Linux (Arch)</li>
+                </ul>
+            </aside>
+        </article>
 
-                    <p class="intro">
-                        Much of my work happens privately, within teams and
-                        organizations. What’s collected here is necessarily
-                        selective.
-                    </p>
-                </header>
-
-                <figure class="work-image">
-                    <Image src={contact} alt={"Get in contact"} />
-                    <!-- Optional image later -->
-                </figure>
-            </article>
+        <section class="projects-section">
+            <h2 class="title-font">Selected Projects</h2>
             <ProjectTease />
-            <Footer />
-        </main>
-    </body>
-</html>
+        </section>
+    </main>
+</Layout>
+
 <style>
     main {
         max-width: 1200px;
@@ -196,6 +175,32 @@ let years =
         .work {
             grid-template-columns: 3fr 2fr;
             align-items: start;
+        }
+    }
+    .work-intro {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 4rem;
+        margin: 4rem 0;
+    }
+    .big-intro {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+    }
+    .experience-cta {
+        padding: 1.5rem;
+        background: var(--accent-light); /* Give it a subtle background */
+        border-left: 4px solid var(--accent);
+    }
+    .tech-stack ul {
+        list-style: none;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+    @media (max-width: 768px) {
+        .work-intro {
+            grid-template-columns: 1fr;
         }
     }
 </style>

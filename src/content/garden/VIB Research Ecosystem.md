@@ -1,6 +1,7 @@
 ---
 tags:
   - work
+  - work-project
 title: VIB Research Ecosystem
 description: Reflections on building web apps to help scientists and researchers at VIB
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/FrancesHerdlingerByAndrewLoomis.jpg/1280px-FrancesHerdlingerByAndrewLoomis.jpg
