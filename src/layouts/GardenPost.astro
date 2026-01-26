@@ -7,7 +7,7 @@ import Nav from "../components/Nav.astro";
 
 type Props = CollectionEntry<"garden">["data"];
 
-const { title, description, tags, hero } = Astro.props;
+const { title, description, tags, hero, attrib } = Astro.props;
 ---
 
 <html lang="en">
@@ -53,6 +53,11 @@ const { title, description, tags, hero } = Astro.props;
                             )
                         }
                         <div class="hero-overlay"></div>
+                        {
+                            attrib && (
+                                <span class="hero-attribution">{attrib}</span>
+                            )
+                        }
                     </div>
 
                     <div class="hero-content">
@@ -250,5 +255,22 @@ const { title, description, tags, hero } = Astro.props;
         aspect-ratio: 16 / 9;
         object-fit: cover;
         display: block;
+    }
+    .hero-attribution {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        z-index: 4; /* Above the overlay */
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.6);
+        font-family: var(--font-mono, monospace);
+        pointer-events: none;
+    }
+
+    /* Optional: Hide attribution on very small screens if it clusters */
+    @media (max-width: 480px) {
+        .hero-attribution {
+            display: none;
+        }
     }
 </style>

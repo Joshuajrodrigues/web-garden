@@ -4,6 +4,7 @@ tags:
 title: My work experience so far
 description: My professional work history and projects that I worked on
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Philipp_Jakob_Loutherbourg_d._J._002.jpg/960px-Philipp_Jakob_Loutherbourg_d._J._002.jpg
+attrib: Coalbrookdale at night (1801) Philipp Jakob Loutherbourg
 ---
 I began working professionally since **Aug 2021**. Straight out of engineering college even before my degree reached my doorstep. (Degrees here come through postal service ). 
 

@@ -7,7 +7,7 @@ tags:
   - tutorial
 description: A minimal rich text editor built with prosemirror and how to build your own
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/The_Village_Politicians_by_John_Lewis_Krimmel%2C_c._1819.JPG/1280px-The_Village_Politicians_by_John_Lewis_Krimmel%2C_c._1819.JPG
-attrib: By John Lewis Krimmel - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=85878179
+attrib: The Village Politicians (1819) John Lewis Krimmel
 ---
 YAPYAP is a React component library for a GitHub-style rich text editor built on ProseMirror.
 
