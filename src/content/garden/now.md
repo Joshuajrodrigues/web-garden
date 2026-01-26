@@ -16,6 +16,13 @@ I also click pictures of [[birds that show up at my window]].
 
 I'm reading <mark style="background:#d3f8b6">A Quiet Place by Seicho Matsumoto.</mark> You can check [[my previous reads]] and my thoughts on them if you like.
 
+And here's some [[notable reads and authors I like]]
+
+## Anime
+Currently watching Friren 
+- [[Anime I wanna watch]]
+- [[Notable past anime I've watched]]
+
 ## Music
 
 I've been listening to _**Ego Death at a Bachelorette Party**_  by Hayley Williams.

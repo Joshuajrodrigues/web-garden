@@ -24,9 +24,10 @@ The projects I've worked on are as follows.
 
 
 ## Onstro
-- Tekflow - Proprietary design system and component library.
+- [[Tekflow]] - Proprietary design system and component library.
 
 ## VIB
+The [[VIB Suite]], which contained:
 - VIB Connect 360
 - VIB Home
 - VIB Ticketing

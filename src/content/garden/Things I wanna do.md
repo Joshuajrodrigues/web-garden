@@ -14,4 +14,5 @@ hero: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Dreaming%2C_by_J
 - [[Make a Youtube channel]]
 - [[Learn sign language]]
 - write on [[authentication the old way in frontend]]
-- 
+- write on interview process updates
+- start a bookclub
