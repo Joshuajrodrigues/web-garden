@@ -1,0 +1,13 @@
+---
+const images = Object.values(
+    import.meta.glob("/src/images/bord/*.avif", { eager: true }),
+);
+---
+
+<div class="gallery">
+    {
+        images.map((img) => (
+            <img src={img.default} alt="Bird at the window" loading="lazy" />
+        ))
+    }
+</div>

@@ -9,8 +9,6 @@ I began working professionally since **Aug 2021**. Straight out of engineering c
 
 Since then, I have progressed from a Trainee to Junior, then Software Engineer, and I am now serving as a **Senior Software Engineer**. My core expertise lies in the frontend ecosystem, specifically crafting robust interfaces with **JavaScript, React, Vue, Astro, Svelte and Next.js**.
 
-I love planning cool stuff, my experience so far has been in building enterprise web apps that help users like scientists and government officials get their work done.
-
 My professional focus has been building enterprise-grade web applications that empower specialized users like researchers, scientists, and government officials to manage complex data securely and intuitively.
 
 >**Note on Confidentiality:**  Due to the sensitive nature of internal enterprise projects and my perpetual confidentiality obligations , the information shared here is strictly focused on my personal technical growth, career milestones, and the application of industry-standard patterns rather than proprietary internals.
