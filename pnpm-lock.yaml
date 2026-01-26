@@ -17,21 +17,6 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.7.0
         version: 3.7.0
-      '@fontsource-variable/cormorant-garamond':
-        specifier: ^5.2.6
-        version: 5.2.6
-      '@fontsource/ibm-plex-serif':
-        specifier: ^5.2.7
-        version: 5.2.7
-      '@fontsource/jacquard-24-charted':
-        specifier: ^5.2.8
-        version: 5.2.8
-      '@fontsource/pirata-one':
-        specifier: ^5.2.8
-        version: 5.2.8
-      '@fontsource/unifrakturcook':
-        specifier: ^5.2.8
-        version: 5.2.8
       astro:
         specifier: ^5.16.11
         version: 5.16.11(rollup@4.55.2)(typescript@5.9.3)
@@ -256,21 +241,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource-variable/cormorant-garamond@5.2.6':
-    resolution: {integrity: sha512-5vHPJWMuTbVoB6OnorCflWJ51NJZ7eQWw58tVFUE/hHphTi/z2vrKESbuMSJ3diOC5KgPm/RLv2ULur+N1NLJQ==}
-
-  '@fontsource/ibm-plex-serif@5.2.7':
-    resolution: {integrity: sha512-04owmc2OQQ/DAMjXjEMJc+7V4dBVmR01aIFOg4cuqS8pQ4HbvtlYs/u6+O0vCt21EMx5M/azIbgx43iKyisEOA==}
-
-  '@fontsource/jacquard-24-charted@5.2.8':
-    resolution: {integrity: sha512-IYrjv9Hvund/0DAixBsJVF8zDw8o2jjkoQ0yKbcS98QbS4IaEUat7TzK2yXJeEEhKnWwSU5NbZtsijI1VggINA==}
-
-  '@fontsource/pirata-one@5.2.8':
-    resolution: {integrity: sha512-hl3Zqt6mgP+jstHnv2qYc2xQdYM1DSYrpSU9bpS1fYExoGFgJJNbXTPBQ9XivNk9RCKkibhou3iqoOZQOXM48w==}
-
-  '@fontsource/unifrakturcook@5.2.8':
-    resolution: {integrity: sha512-CfSVmZWbkUO2XEgjhKWBgzoQbndmlt/idxcwqHfqsI8b9rja7sbgnGZ6H/Wd3vuu9xYQ/eOreKOPGlKCGdK3Ww==}
 
   '@img/colour@1.0.0':
     resolution: {integrity: sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw==}
@@ -1940,16 +1910,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.12':
     optional: true
-
-  '@fontsource-variable/cormorant-garamond@5.2.6': {}
-
-  '@fontsource/ibm-plex-serif@5.2.7': {}
-
-  '@fontsource/jacquard-24-charted@5.2.8': {}
-
-  '@fontsource/pirata-one@5.2.8': {}
-
-  '@fontsource/unifrakturcook@5.2.8': {}
 
   '@img/colour@1.0.0': {}
 

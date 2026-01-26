@@ -12,11 +12,6 @@
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
-    "@fontsource-variable/cormorant-garamond": "^5.2.6",
-    "@fontsource/ibm-plex-serif": "^5.2.7",
-    "@fontsource/jacquard-24-charted": "^5.2.8",
-    "@fontsource/pirata-one": "^5.2.8",
-    "@fontsource/unifrakturcook": "^5.2.8",
     "astro": "^5.16.11",
     "remark-wiki-link": "^2.0.1",
     "sharp": "^0.34.3"
