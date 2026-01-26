@@ -5,6 +5,12 @@
     --color-text-mid: #666;
     --color-border-mid: #bdbdbd;
     --color-border-light: #eee;
+    --fs-base: clamp(
+        1.2rem,
+        0.95rem + 0.25vw,
+        1.8rem
+    ); /* Scales from ~16px to 20px */
+    --fs-xl: clamp(3rem, 10vw, 6rem);
 }
 
 /* BODY -------------------------------------------------- */
@@ -18,7 +24,7 @@ body {
     background-size: 100% 600px;
 
     color: var(--color-text);
-    font-size: 24px;
+    font-size: var(--fs-base);
     line-height: 1.7;
 }
 
@@ -61,9 +67,12 @@ h2 {
 }
 /* CODE BLOCKS -------------------------------------------------- */
 code {
-    background-color: #3c3836;
+    font-family: monospace; /* Ensures consistent width */
     color: #fabd2f;
-    border-radius: 2px;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.85em; /* Scaled relative to your body font */
+    white-space: break-spaces;
 }
 
 pre {
@@ -71,6 +80,8 @@ pre {
     color: #ebdbb2;
     padding: 1.5em;
     border-radius: 8px;
+    overflow: auto;
+    max-width: 700px;
 }
 
 /* BLOCKQUOTE -------------------------------------------------- */
@@ -111,4 +122,63 @@ hr {
     text-decoration-color: var(--accent);
     text-decoration-thickness: 4px;
     text-underline-offset: 4px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+
+    /* Responsive Font Size */
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    line-height: 1.5;
+
+    /* Layout fix for mobile */
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* TABLE HEAD -------------------------------------------------- */
+th {
+    background-color: #3c3836; /* Your mid-grey */
+    color: #fabd2f; /* Your accent yellow */
+    text-align: left;
+    padding: 0.75rem;
+    border: 1px solid #3c3836;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+/* TABLE BODY -------------------------------------------------- */
+td {
+    padding: 0.75rem;
+    border: 1px solid #3c3836; /* Using your hr/border color */
+    color: var(--color-text); /* Your main text color */
+}
+
+/* Zebra Striping using your existing palette */
+tr:nth-child(even) {
+    background-color: rgba(
+        60,
+        56,
+        54,
+        0.05
+    ); /* Very faint version of your mid-grey */
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: rgba(60, 56, 54, 0.1);
 }

@@ -6,35 +6,35 @@ description: My professional work history and projects that I worked on
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Philipp_Jakob_Loutherbourg_d._J._002.jpg/960px-Philipp_Jakob_Loutherbourg_d._J._002.jpg
 ---
 
-I began working professionally since Aug 2021. Straight out of engineering college even before my degree reached my doorstep. (Degrees here come through postal service ). 
+I began working professionally since **Aug 2021**. Straight out of engineering college even before my degree reached my doorstep. (Degrees here come through postal service ). 
 
-Since then I've climbed ranks starting from a small trainee to junior to software engineer and now a senior software engineer. 
-
-My expertise mostly lies in frontend and working with technologies like javascript, react and nextjs.
+Since then, I have progressed from a **Trainee** to Junior, then Software Engineer, and I am now serving as a **Senior Software Engineer**. My core expertise lies in the frontend ecosystem, specifically crafting robust interfaces with **JavaScript, React, and Next.js**.
 
 I love planning cool stuff, my experience so far has been in building enterprise web apps that help users like scientists and government officials get their work done.
 
-From my company I've worked with 2 major clients. VIB, Belgium 🇧🇪. And the Ghana Goldbod 🇬🇭. 
+My professional focus has been building enterprise-grade web applications that empower specialized users like researchers, scientists, and government officials to manage complex data securely and intuitively.
 
-Due to the obvious sensitive nature of internal projects, the information I share here is strictly limited to document my personal career journey rather than the apps.
+>**Note on Confidentiality:**  Due to the sensitive nature of internal enterprise projects and my perpetual confidentiality obligations , the information shared here is strictly focused on my personal technical growth, career milestones, and the application of industry-standard patterns rather than proprietary internals.
 
-You can always hit me up if you wish to learn more about me and my work experience.
+## 🏢 Onstro (formally Teknorix)
 
-The projects I've worked on are as follows.
+As a full-time member of the team, I contributed to the architecture of our internal tools:
 
+- [[Design Systems and Component Architecture]] : I focused on scaling a unified component library, building high-order components for complex data density and ensuring UX consistency across all client projects.
+## 🧬 VIB (Vlaams Instituut voor Biotechnologie)
 
-## Onstro
-- [[Tekflow]] - Proprietary design system and component library.
+I worked on the frontend for the **[[VIB Research Ecosystem]]**, a suite of integrated applications designed for the life sciences sector. This included:
 
-## VIB
-The [[VIB Suite]], which contained:
-- VIB Connect 360
-- VIB Home
-- VIB Ticketing
-- VIB Forms
-- VIB Knowledge Base
-- VIB Publications 
+- **VIB Connect**: A unified access portal for service discovery.    
+- **Research Tools**: Specialized applications for data collection, publication indexing, and knowledge sharing.
+- **Public Interfaces**: High-traffic platforms for event ticketing and institutional outreach.
 
-## Goldbod
-- Logistics app for gold transportation 
+## 🇬🇭 Ghana Goldbod
+I contributed to the development of a [[Logistics and Supply Chain App]] designed for the secure transportation of gold using blockchain.
 
+- **Focus**: Real-time data tracking, secure workflow states, and intuitive dashboards for logistics management.
+
+---
+## Let's Connect
+
+I am always open to discussing frontend architecture, React patterns, or the challenges of building for the enterprise. You can reach out to me via email or LinkedIn if you wish to learn more about my journey.
