@@ -2,41 +2,62 @@
 import HeaderLink from "./HeaderLink.astro";
 ---
 
-<nav>
+<nav aria-label="Main Navigation">
     <div class="internal-links">
-        <HeaderLink class="title-font" href="/">Garden</HeaderLink>
-        <HeaderLink class="title-font" href="/work">Work</HeaderLink>
-        <HeaderLink class="title-font" href="/about">About</HeaderLink>
+        <HeaderLink href="/">Garden</HeaderLink>
+        <HeaderLink href="/work">Work</HeaderLink>
+        <HeaderLink href="/about">About</HeaderLink>
     </div>
-    <div>
-        <a class="mailto" href="mailto:hello@joshuarodrigues.dev"
-            >hello@joshuarodrigues.dev</a
-        >
+    <div class="contact-link">
+        <a class="mailto" href="mailto:hello@joshuarodrigues.dev">
+            hello@joshuarodrigues.dev
+        </a>
     </div>
 </nav>
 
 <style>
     nav {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         margin-top: 1em;
+        gap: 1rem; /* Prevents items from touching when wrapping */
     }
+
+    .internal-links {
+        display: flex;
+        align-items: center;
+        /* Responsive gap using clamp */
+        gap: clamp(1rem, 4vw, 2.5rem);
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 500;
+    }
+
     a.mailto {
         color: var(--text);
         background-color: var(--accent-link);
         display: inline-block;
         text-decoration: underline;
-        padding: 2px 8px;
-        font-size: clamp(1.3rem, 3vw, 1.5rem);
-        &:hover {
+        padding: 4px 12px;
+        border-radius: 4px; /* Optional: adds a modern touch */
+        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+        transition: opacity 0.2s ease-in-out;
+
+        &:hover,
+        &:focus {
             opacity: 0.8;
+            outline: 2px solid var(--accent-link); /* Better focus visibility */
+            outline-offset: 4px;
         }
     }
-    .internal-links {
-        display: flex;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        gap: 2rem;
+
+    /* Stack on mobile if the screen is very small */
+    @media (max-width: 480px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 </style>

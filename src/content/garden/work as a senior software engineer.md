@@ -5,10 +5,9 @@ title: My work experience so far
 description: My professional work history and projects that I worked on
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Philipp_Jakob_Loutherbourg_d._J._002.jpg/960px-Philipp_Jakob_Loutherbourg_d._J._002.jpg
 ---
-
 I began working professionally since **Aug 2021**. Straight out of engineering college even before my degree reached my doorstep. (Degrees here come through postal service ). 
 
-Since then, I have progressed from a **Trainee** to Junior, then Software Engineer, and I am now serving as a **Senior Software Engineer**. My core expertise lies in the frontend ecosystem, specifically crafting robust interfaces with **JavaScript, React, and Next.js**.
+Since then, I have progressed from a **Trainee** to Junior, then Software Engineer, and I am now serving as a **Senior Software Engineer**. My core expertise lies in the frontend ecosystem, specifically crafting robust interfaces with **JavaScript, React, Vue, Astro, Svelte and Next.js**.
 
 I love planning cool stuff, my experience so far has been in building enterprise web apps that help users like scientists and government officials get their work done.
 
@@ -37,4 +36,4 @@ I contributed to the development of a [[Logistics and Supply Chain App]] designe
 ---
 ## Let's Connect
 
-I am always open to discussing frontend architecture, React patterns, or the challenges of building for the enterprise. You can reach out to me via email or LinkedIn if you wish to learn more about my journey.
+I am always open to discussing [[frontend architecture]], [[React patterns]], or the [[challenges of building for the enterprise]]. You can reach out to me via email or LinkedIn if you wish to learn more about my journey.

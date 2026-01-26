@@ -5,7 +5,9 @@ title: VIB Research Ecosystem
 description: Reflections on building web apps to help scientists and researchers at VIB
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/FrancesHerdlingerByAndrewLoomis.jpg/1280px-FrancesHerdlingerByAndrewLoomis.jpg
 ---
-The **Vlaams Instituut voor Biotechnologie (VIB)** represents a complex enterprise environment where high-security data must be accessible to a diverse user base. My role, through **Onstro**, involved managing and scaling a suite of interconnected web applications designed to bridge the gap between rigorous scientific data and intuitive user experience.
+The [Vlaams Instituut voor Biotechnologie (VIB)](https://en.wikipedia.org/wiki/Vlaams_Instituut_voor_Biotechnologie) represents a complex enterprise environment where high-security data must be accessible to a diverse user base. 
+
+My role, through **Onstro**, involved managing and scaling a suite of interconnected web applications designed to bridge the gap between rigorous scientific data and intuitive user experience.
 
 My focus was on maintaining a high standard of code efficiency and initiative.
 
@@ -27,7 +29,7 @@ A significant portion of the work involved making scientific output accessible.
 
 ### 🔑 Unified Access & Service Portals
 
-To solve the problem of "app fatigue," we worked on a unified access portal—a central entry point that ties various service providers together.
+To solve the problem of "app fatigue," we worked on a unified access portal, this was a central entry point that ties various service providers together.
 
 - **Authentication & Navigation:** Ensuring a "few clicks away" philosophy for service discovery.
 - **Inter-app Integration:** Implementing the logic that allows data to flow securely and privately between different research tools.
@@ -37,5 +39,5 @@ To solve the problem of "app fatigue," we worked on a unified access portal—a 
 ## Core Frontend Contributions
 
 - **Performance & Upkeep:** Managed the periodic review and enhancement of existing codebases to ensure they met evolving performance benchmarks.
-- **UI Consistency:** Applied standardized design patterns  to ensure a seamless transition between various research modules.
+- **UI Consistency:** Applied standardized design patterns to ensure a seamless transition between various research modules.
 - **Accessibility:** Focused on making complex scientific tools intuitive for users who may not be tech-savvy, ensuring high usability across the board.

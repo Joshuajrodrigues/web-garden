@@ -5,11 +5,15 @@ title: Logistics and Supply Chain App
 description: Reflections on building scalable Logistics and Supply Chain App
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Gustav_Klimt_046.jpg/960px-Gustav_Klimt_046.jpg
 ---
-I serve as the sole Senior Frontend Developer for a critical supply chain and logistics platform focused on the secure and transparent movement of gold from Ghana. The primary objective is to digitize and secure the chain of custody to prevent smuggling and ensure regulatory compliance through every stage of the lifecycle.
+On this project I currently serve as the sole Senior Front-end Developer for a critical supply chain and logistics platform focused on the secure and transparent movement of gold from Ghana. 
+
+The primary objective is to digitize and secure the chain of custody to prevent smuggling and ensure regulatory compliance through every stage of the life cycle.
 
 ## Technical Leadership & Mentorship
 
-For this project, I stepped into a leadership role where I manage a team of junior developers and mentor interns.
+For this project, I stepped into a leadership role where I manage a team of junior developers and mentor interns. 
+
+You can read about my [[challenges in hiring new candidates]] and [[mentoring in the age of ai ]]
 
 - **Independent Ownership:** I act as the primary technical point of contact for the frontend, coordinating directly with the backend teams and management to align on delivery.
 - **Mentorship:** I am responsible for code reviews, architectural guidance, and unblocking my team, ensuring that juniors and interns grow while maintaining high code quality.
