@@ -14,21 +14,21 @@ My focus was on maintaining a high standard of code efficiency and initiative.
 
 ## Technical Pillars of the Ecosystem
 
-### 🏗️ Workflow & Data Collection Systems
+###  Workflow & Data Collection Systems
 
 I contributed to the frontend architecture of tools designed for automated data gathering and research management.
 
 - **Low-Code Data Entry:** Worked on interfaces that allow non-technical users to build validated data collection forms with custom privacy controls.
 - **Workflow Orchestration:** Developed dashboard views and guided task lists to help stakeholders stay in sync during complex, multi-stage processes (such as funding or grant lifecycles).
 
-### 📢 Research Communication & Public Portals
+###  Research Communication & Public Portals
 
 A significant portion of the work involved making scientific output accessible.
 
 - **Publication Management:** Maintaining platforms used by researchers to index and share scientific work.
 - **Event & Access Systems:** Scaling ticketing and public-facing activity platforms to handle high-traffic interactions.
 
-### 🔑 Unified Access & Service Portals
+###  Unified Access & Service Portals
 
 To solve the problem of "app fatigue," we worked on a unified access portal, this was a central entry point that ties various service providers together.
 

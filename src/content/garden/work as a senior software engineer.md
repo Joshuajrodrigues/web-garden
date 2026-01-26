@@ -15,12 +15,12 @@ My professional focus has been building enterprise-grade web applications that e
 
 >**Note on Confidentiality:**  Due to the sensitive nature of internal enterprise projects and my perpetual confidentiality obligations , the information shared here is strictly focused on my personal technical growth, career milestones, and the application of industry-standard patterns rather than proprietary internals.
 
-## 🏢 Onstro (formally Teknorix)
+## Onstro (formally Teknorix)
 
 As a full-time member of the team, I contributed to the architecture of our internal tools:
 
 - [[Design Systems and Component Architecture]] : I focused on scaling a unified component library, building high-order components for complex data density and ensuring UX consistency across all client projects.
-## 🧬 VIB (Vlaams Instituut voor Biotechnologie)
+##  VIB (Vlaams Instituut voor Biotechnologie)
 
 I worked on the frontend for the **[[VIB Research Ecosystem]]**, a suite of integrated applications designed for the life sciences sector. This included:
 
@@ -28,7 +28,7 @@ I worked on the frontend for the **[[VIB Research Ecosystem]]**, a suite of inte
 - **Research Tools**: Specialized applications for data collection, publication indexing, and knowledge sharing.
 - **Public Interfaces**: High-traffic platforms for event ticketing and institutional outreach.
 
-## 🇬🇭 Ghana Goldbod
+##  Ghana Goldbod
 I contributed to the development of a [[Logistics and Supply Chain App]] designed for the secure transportation of gold using blockchain.
 
 - **Focus**: Real-time data tracking, secure workflow states, and intuitive dashboards for logistics management.
