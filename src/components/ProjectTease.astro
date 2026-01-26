@@ -20,17 +20,11 @@ const projects = await getCollection("garden", ({ data }) => {
                     ) : (
                         <div class="placeholder-bg" />
                     )}
-                    <div class="image-overlay">
-                        <span class="view-tag title-font">Case Study</span>
-                    </div>
+
                 </div>
 
                 <div class="content">
-                    <div class="meta">
-                        {project.data.tags?.slice(0, 3).map((tag) => (
-                            <span class="tag">{tag}</span>
-                        ))}
-                    </div>
+
                     <h3 class="title-font project-title">
                         {project.data.title}
                     </h3>
@@ -39,7 +33,7 @@ const projects = await getCollection("garden", ({ data }) => {
                             "Building robust frontend architectures for complex enterprise data."}
                     </p>
                     <div class="footer-link">
-                        <span>Explore Project</span>
+                        <span>Read more</span>
                         <svg
                             width="20"
                             height="20"
