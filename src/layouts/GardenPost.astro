@@ -260,17 +260,10 @@ const { title, description, tags, hero, attrib } = Astro.props;
         position: absolute;
         bottom: 10px;
         right: 20px;
-        z-index: 4; /* Above the overlay */
-        font-size: 0.75rem;
+        z-index: 4;
+        font-size: clamp(0.5rem, 1vw, 1rem);
         color: rgba(255, 255, 255, 0.6);
         font-family: var(--font-mono, monospace);
         pointer-events: none;
-    }
-
-    /* Optional: Hide attribution on very small screens if it clusters */
-    @media (max-width: 480px) {
-        .hero-attribution {
-            display: none;
-        }
     }
 </style>
