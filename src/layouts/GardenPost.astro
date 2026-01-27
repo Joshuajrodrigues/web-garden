@@ -5,6 +5,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import Banner from "../components/Banner.astro";
+import Webmentions from "../components/Webmentions.astro";
 
 type Props = CollectionEntry<"garden">["data"];
 
@@ -80,6 +81,7 @@ const { title, description, tags, hero, attrib } = Astro.props;
                     <slot />
                 </div>
             </article>
+            <Webmentions />
         </main>
         <Footer />
     </body>
