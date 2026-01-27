@@ -14,7 +14,7 @@
 }
 
 @font-face {
-    font-family: "LouizeDisplay", "Times New Roman", Times, serif;
+    font-family: "LouizeDisplay";
     src: url("/fonts/LouizeDisplay.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
@@ -22,8 +22,7 @@
 }
 
 @font-face {
-    font-family:
-        "PPNeueMontreal", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "PPNeueMontreal";
     src: url("/fonts/PPNeueMontreal.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
@@ -32,7 +31,7 @@
 
 /* BODY -------------------------------------------------- */
 body {
-    font-family: "PPNeueMontreal", serif;
+    font-family: "PPNeueMontreal", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: left;
@@ -48,15 +47,15 @@ body {
 /* HEADINGS -------------------------------------------------- */
 
 .fancy-font {
-    font-family: "LouizeDisplay", system-ui;
+    font-family: "LouizeDisplay", "Times New Roman", Times, serif;
 }
 
 .runny-font {
-    font-family: "LouizeDisplay", system-ui;
+    font-family: "LouizeDisplay", "Times New Roman", Times, serif;
 }
 
 .title-font {
-    font-family: "LouizeDisplay", serif;
+    font-family: "LouizeDisplay", "Times New Roman", Times, serif;
 }
 
 .xl {
