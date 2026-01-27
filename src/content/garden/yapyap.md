@@ -2,9 +2,8 @@
 title: Making YAP, YAP ! A prose-mirror tutorial
 tags:
   - experiments
-  - work
   - hobby-project
-  - tutorial
+  - todo
 description: A minimal rich text editor built with prosemirror and how to build your own
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/The_Village_Politicians_by_John_Lewis_Krimmel%2C_c._1819.JPG/1280px-The_Village_Politicians_by_John_Lewis_Krimmel%2C_c._1819.JPG
 attrib: The Village Politicians (1819) John Lewis Krimmel
