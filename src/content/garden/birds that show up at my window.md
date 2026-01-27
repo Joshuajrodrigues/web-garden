@@ -29,13 +29,11 @@ I'm not a professional bird photographer and it'll show, I still enjoy watching 
   <img src="/bords/11.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/12.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/13.avif" alt="Bird tapping the glass" loading="lazy" />
-  <img src="/bords/14.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/15.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/16.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/17.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/18.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/19.avif" alt="Bird tapping the glass" loading="lazy" />
-  <img src="/bords/20.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/21.avif" alt="Bird tapping the glass" loading="lazy" />
   <img src="/bords/22.avif" alt="Bird tapping the glass" loading="lazy" />
 </div>
