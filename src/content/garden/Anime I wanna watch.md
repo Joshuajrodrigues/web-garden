@@ -7,4 +7,6 @@ hero: https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Kan%C5%8D_Sanset
 ---
 My [[thoughts on anime]] 
 1. Orb: On the Movements of the Earth
-2. 
+2. Witch Hat Atelier
+3. To Be Hero X
+4. Gachiakuta
