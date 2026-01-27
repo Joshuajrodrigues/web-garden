@@ -1,7 +1,7 @@
 ---
 const { url = Astro.url } = Astro.props;
 
-const token = import.meta.env.WEBMENTION_TOKEN || "2i3o4wEuP-GT3pU3t3Nfiw";
+const token = "6JWJVyMOTQqNBdpAxtKjMg";
 const api = `https://webmention.io/api/mentions.jf2?target=${url}&token=${token}`;
 
 const response = await fetch(api);
