@@ -1,0 +1,46 @@
+---
+interface Props {
+    text?: string;
+    color?: string;
+}
+
+const { text = "WORK IN PROGRESS", color = "#ff4500" } = Astro.props;
+---
+
+<div class="banner-wrapper">
+    <div class="banner" style={`background-color: ${color};`}>
+        {text}
+    </div>
+</div>
+
+<style>
+    .banner-wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        z-index: 9999;
+        pointer-events: none; /* Allows clicking links under the transparent parts */
+    }
+
+    .banner {
+        position: absolute;
+        top: 39px;
+        right: -41px;
+        width: 200px;
+        padding: 8px 0;
+        color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+        /* The magic slant */
+        transform: rotate(45deg);
+    }
+</style>
