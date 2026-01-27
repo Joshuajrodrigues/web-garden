@@ -44,4 +44,4 @@ I worked on these flexible UI patterns for **Custom Merge Fields**. This basical
 
 - **Modular Distribution:** To keep everything in sync across multiple repositories, I used **Git submodules**. It helped ensure everyone got real-time updates even when the development cycle was moving way too fast.
 
-- **[[UX for Non-Technical Users]]**: At the end of the day, my focus was on making these high-security, heavy-duty applications actually easy to use. I wanted to make sure that anyone—from a student to a senior researcher—could hop in and get their work done without a headache.
+- **[[UX for Non-Technical Users]]**: At the end of the day, my focus was on making these high-security, heavy-duty applications actually easy to use. I wanted to make sure that anyone from a student to a senior researcher, could hop in and get their work done without a headache.

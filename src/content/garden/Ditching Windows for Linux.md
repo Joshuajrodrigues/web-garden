@@ -3,107 +3,80 @@ tags:
   - rant
   - experiments
   - linux
-title: Ditching windows
+title: Ditching windows for Arch Linux
 description: Microslop is now a blackbox
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg/960px-Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg
 ---
-## The Old World Order
+Windows has been catching strays for a while now, and rightfully so. Hence, here I am doing my part and adding my own.
 
-For a long time Windows had something no other operating system did.
 
-Freedom.
+<u>What started off as user friendly software that made personal computer a household name, has slowly devolved into this alien entity that causes natural aversion among is users. </u>
 
-Now you'll say, "Linux was always free, and more than Windows!"
+- When windows sets edge as your default browser, users replace it with chrome.
 
-Yes and no. Linux was free, but you have to consider the fact that a majority of personal computers are bought for either gaming or productivity. And the entry to Linux was always quite difficult. If you were stuck on something in Windows, you had a UI for almost everything to debug yourself out. Uninstallations were as easy as installations. Plus there was the added benefit of all your friends and family being able to help you out when you were stuck.
+- When it makes bing your default search engine users change it to Google. 
 
-So while Linux was free and offered a lot of freedom, it is quite [[a daunting type of freedom]]. 
+- When Microsoft tells you there is an update, users try to delay it. 
 
-Apple, while an expensive walled garden, only suffered from the issue of gaming. It definitely provides a much better user experience but at the cost of becoming a semi black box, where a lot of internals and power tools got hidden away, though these weren't hard to access. Plus I always found it a bit restrictive in a lot of ways. It didn't always let me do what I want, install what I want, or use the apps I wanted, but this was a personal issue. In general, I'd say Apple just never caught on in many places due to its cost factor and lack of gaming support.
+- There is an entire cottage industry online on how to modify your Taskbar and start menu to look different or old. 
 
-Linux suffered a lot back then: lack of gaming support, lack of productivity apps, and a lack of an easy community (friends and family).
+- There is even bigger industry focused on debloating your windows and how to get around certain "features" and restrictions imposed by windows.
 
-Though [[Wine]] was and is still awesome, setting it up and debugging it wasn't very entry-level friendly. Libre Office, while it worked well in a practical sense, caused a lot of formatting issues when your coworkers opened your documents in their Microsoft Office apps.
+There are many more examples and instead of asking why is user base behaves this way Microsoft doubles down on its behavior, compounding its mistake over and over. 
 
-And the biggest hindrance to Linux was also its strongest feature. The terminal: loved by programmers but a black box to all other users.
+<u>One often overlooked issue is its relentless push in workspace.</u>
 
-So what changed?
+Microsoft at this point basically runs a lot of companies by providing integrated workspace. Teams, LinkedIn, Outlook, Office Apps and if you are a software company it even runs your infrastructure with Azure and your code with dotnet. If you decided to use a different programming language chances are you still use VS Code.
 
-## Linux Improves
+**This makes it boring and takes away the "Personal".** 
 
-Over the years, Linux and its community did the impossible. Without giving in to peer pressure to make the OS accessible, they managed to somehow still make it easy. It is a middle ground that doesn't treat the user as a "dumdum." It isn't afraid to tell the user [[it's ok to learn and keep learning]]. This, combined with the fact that open source software is going one-on-one with paid software, pushed Linux leaps ahead of where it was.
+During the pandemic I would work remotely and often had to work from a place away from my bed. The reason being if I was in bed during work, and in bed after work. It never felt like the workday ended.
 
-You now have Blender for 3D, Kdenlive for video editing, [[Godot]] for making games. Only-office and Libre Office improved. Though I wouldn't say they are 1:1, they are close. And with Microsoft and Google providing online versions of their tools, it made it easy to use them on Linux systems via browsers.
+Now I feel it with windows. Working in a tightly integrated Microsoft work environment, I'm sick of its design system. Its choice of font. It's sound effects and even its animations.
 
-Then came Steam, investing into Arch for their Steam Deck and starting development on Proton, a fork of Wine. Most games, minus some spyware-centric multiplayer games, now work on Linux. Sometimes even better than on Windows.
+When I'm done with work. I'm greeted by the same ui and interface as my work environment on my home PC and that just shuts my brain off. It feels like my brains burning out at ten times the usual speed.
 
-However, this still wasn't enough to make me and many people ditch Windows.
+All this would be still fine if windows allowed a real sense of personalization that goes beyond just wallpaper and themes. Let the users create a truly personal system. Some way to separate work from play. Instead, we have a buggy homogenized software that consumes all our data and resources.
 
-So what was?
+This is why I moved to linux.
 
-## Microslop
+>I wanted something fresh, something trustworthy and something that truly felt me.
 
-Microsoft, the undisputed king of operating systems, has started to lose its footing.
+Arch linux has been a blast so far. Light weight fast free and surprisingly stabler than windows.
 
-My personal headcanon is that it is the same as any big company: a bunch of yes-men at the top that no longer have any love for software nor development, just the idea of it and money
+No longer do I fear a update will break my pc, which is quite ironic knowing arch linux is notorious for this.
 
-With the rollout of AI and Copilot, things went from bad to worse. There are enough articles about this online, so I'll just focus on my experiences here.
+There are of course my stabler distros out there like Fedora, Mint and Ubuntu.
 
-## This PC
+The reason I chose arch was because it's a complete opposite of windows in every shape and form.
 
-I love expressing myself. I take pride in my values. So when my computer, the thing I spend like 50 percent of my time on these days, doesn't let me express myself the way I want, nor shares the same values that I do, it makes it feel like I'm talking and working with a person I have no inclinations to be friends with.
+The arch wiki states that
 
-It is like walking into a restaurant with your friend and a random third person shows up and you are forced to share the table and food with them. And while you and your friend want to talk about something you two believe in, the third person talks completely opposite to your beliefs. And you are forced to put up with it.
+>Arch is not designed for any particular type of use. Rather, it is designed for a particular type of user. Arch targets competent users who enjoy its 'do-it-yourself' nature, and who further exploit it to shape the system to fit their unique needs. 
 
-I don't think AI is real. The technical term for what we have right now is machine learning. 
+Suddenly I felt, here was a piece of technology that trusted me to make use of it. Because it existed for me and not the other way around.
 
-I don't think AI is moral, because machine learning works on trained data, and the current models use data that has been stolen.
+You can read more on [[Arch Linux|how I made Arch Linux my own here]] 
 
-I have more [[thoughts on ai]]. I think it has its place. I think it is powerful. But I think in its current popular form, it is immoral.
 
-## My PC
 
-Sometime in December, PewDiePie made a video showcasing his Arch Linux setup.
 
-I had a range of emotions going through me that day: giddiness, envy, sadness, and overall confusion.
 
-Because I understood that this was exactly what I wanted, and I already knew about Linux for a long time. I had willingly put it away, saying I’ll do it later one day, when I become a “big boy programmer.” I thought that I wasn’t ready for it, even though I was already working in the industry for about 5 years now.
 
-This, to a lot of people, would make sense. You don't jump into the pool and then learn to swim.
 
-But again, sometimes you do. Seeing PewDiePie make it work, write custom scripts to modify it, and then fix a bug with Firefox to make it launch faster. Even though he's definitely not "ready" for it.
 
-Even if he has ample money and time, we don't often see people with ample money and time run Arch. This made me realize that I was missing out.
 
-Then my brain started making excuses. I work as a frontend developer. I don't deal with hardware. And then PewDiePie said something very jokingly that I feel might be quite profound.
 
-> "Sometimes I start things not really thinking if it'll be a good idea."
 
-This statement obviously comes with a lot of asterisks.
 
-However, depending on the context of things, especially for people who get their energy from being creative, this is a strong statement. I saved up for a T7 SSD and 4 months later began studying Arch, and it just got better and better.
 
-The Arch Wiki states that:
 
-> "Arch is not designed for any particular type of use. Rather, it is designed for a particular type of user. Arch targets competent users who enjoy its 'do-it-yourself' nature, and who further exploit it to shape the system to fit their unique needs."
 
-I felt that here was a piece of technology that trusted me to make use of it.
 
-I didn’t want just a desktop environment anymore. I wanted to understand:
 
-- why should I choose a specific [[bootloader]]
-- why should I pick [[GPT]] over [[MBR]]
-- why should I use [[Btrfs]], and how [[subvolumes]] work
-- how backup systems integrate with snapshots
-- how a kernel talks to the hardware
-- and how all these pieces become an operating system
 
-Arch didn’t spoon-feed me choices. It handed me tools and said, “Build it.”
 
-I've come to realize my entire being dislikes defaults. Even if they are sane choices, I'd love to know why those choices were made for me and by whom, and then still choose to agree to them or not. This just seems to be how I am made.
 
-My default state is that I dislike defaults. And maybe that's the only default I like.
 
-And my reason to install Arch is to make my computer my own. No longer "This PC," but "My PC."
 
-[[My process for learning arch]] and [[Arch Linux|my arch linux setup]] is on this site if you are interested. But as always, the [arch wiki](https://wiki.archlinux.org/) has it all much better.
+

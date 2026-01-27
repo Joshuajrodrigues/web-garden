@@ -16,7 +16,7 @@ My job, working through **Onstro**, was to manage and scale a whole suite of int
 
 I helped build the frontend architecture for tools that automate data gathering and research management.
 
-- **Low-Code Data Entry:** I worked on interfaces that let people who aren't programmers build their own validated data collection forms—complete with custom privacy controls.
+- **Low-Code Data Entry:** I worked on interfaces that let people who aren't programmers build their own validated data collection forms, complete with custom privacy controls.
 
 - **Workflow Orchestration:** I developed dashboards and guided task lists so everyone stays on the same page during those long, multi-stage processes, like trying to get funding or managing grants.
 

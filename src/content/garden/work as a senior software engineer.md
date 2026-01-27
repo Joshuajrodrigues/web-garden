@@ -22,7 +22,7 @@ Being a startup it also let me use cool bleeding edge technology right of then b
 
 All pretty cool.
 
->**The Confidentiality Disclaimer**  
+###### **The Confidentiality Disclaimer**  
 >Before we dive in, a quick note: I have to be a bit "secret agent" about this. Because I work on internal enterprise projects with sensitive data, I can’t tell you the deep, dark secrets of the proprietary code. But I _can_ talk about my technical growth and the industry-standard patterns I used to make sure everything stayed standing.
 
 ## Onstro (formerly Teknorix)
