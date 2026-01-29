@@ -6,17 +6,21 @@ title: My Arch Linux setup
 description: lets setup our personal os
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Thomas_Cole_-_The_Voyage_of_Life_Childhood%2C_1842_(National_Gallery_of_Art).jpg/1280px-Thomas_Cole_-_The_Voyage_of_Life_Childhood%2C_1842_(National_Gallery_of_Art).jpg
 ---
-## Things I did to make my arch setup my own
 
-The arch wiki is pretty extensive on how to setup arch linux. After a lot of practice and trial and error I managed to learn some basics of linux and arch before making the jump.
+The arch wiki is pretty extensive on how to set up Arch Linux. 
 
-[[my process and steps to install arch]]
+You should always have the [Installation guide open in some tab during the learning process](https://wiki.archlinux.org/title/Installation_guide)
+
+After a lot of practice and trial and error I managed to learn some basics of Linux and arch before making the jump.
+
+[[How I managed to learn to install Arch]]
 
 So in addition to the wiki setup, my arch has a few differences.
 
-1)  I use BTRFS file system
+1)  I use BTRFS file system over the default suggested ext4
 2) I have automatic timeshift setup for backups
-3)  By Arch is setup on an external SSD
+3)  By Arch is set up on an external SSD
+4) KDE desktop for customizations 
 
 ## BTRFS file system
 BTRFS (B-tree File System) is a modern Linux file system designed to replace ext4.
@@ -30,17 +34,17 @@ BTRFS (B-tree File System) is a modern Linux file system designed to replace ext
 - **Built-in RAID options**
 - **Great for rolling distros like Arch**
 ### Subvolumes
-Subvolumes are like **mini independent filesystems** _inside_ one big BTRFS filesystem.
-Think of BTRFS as a **big house**, and subvolumes are **rooms** inside it — all under the same roof.
+Sub-volumes are like **mini independent file systems** _inside_ one big BTRFS filesystem.
 ### They are NOT like partitions.
 - No need to re partition your disk
 - No limits
 - You can create or delete them anytime
-- **Can be snapshotted independently**
+- **Can be snapshotted independently** <- this was important for me
 
 ### Why do we need subvolumes?
 
 Because **snapshots work per-subvolume**.
+
 If you snapshot everything in one giant root filesystem:
 - your logs
 - caches
@@ -48,14 +52,15 @@ If you snapshot everything in one giant root filesystem:
 - home folder
 - temp files
 
-will all get rolled back → **disaster**.
+will all get rolled back, even save games I hear (if you dont have cloud saves)
 
 Example:  
 You rollback system files → suddenly your browser history is erased too.
 
 So we split things.
 
-### Recommended sub system
+### How I made my sub volumes
+
 | Subvolume | Why?                                                     |
 | --------- | -------------------------------------------------------- |
 | @         | System files + easy rollback                             |
@@ -64,6 +69,10 @@ So we split things.
 | @cache    | Reduce snapshot size + SSD wear                          |
 | @log      | Keep system logs out of snapshots                        |
 
+as usually an update or new program will be installed at @. So i can just revert my system to a version that's not broken
+
+
+#### Instructions
 remember to umount /mnt
 
 
@@ -109,3 +118,11 @@ Removable is important:
 4. Many motherboards do not store persistent entries for USB devices.
 
 5. So --removable = portable, reliable boot.
+
+<font color="#ff0000">Only issue is I must remember to never ever ever ever unplug the ssd while using the system without shutting down</font>
+
+### Kde
+
+Finally I decided to install kde plasma for the desktop environment. As it provided a fine balance between complexity and customization. 
+
+At some point I'd like to switch to something like Wayland.

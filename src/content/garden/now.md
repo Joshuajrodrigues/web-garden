@@ -10,7 +10,7 @@ Right now, I am focusing on building a cool place for myself on the internet—a
 
 I’m also planning to pick up cooking some cool new dishes soon, and I’ll be adding those recipes over at /food.
 
-Oh, and I also take pictures of **[[birds that show up at my window]]**.
+Oh, and I also take pictures of **[[animals that show up at my window]]**.
 ## Read
 
 I’m currently reading **A Quiet Place by Seicho Matsumoto**. If you’re curious, you can check out **[[my previous reads]]** to see what I thought of them.
