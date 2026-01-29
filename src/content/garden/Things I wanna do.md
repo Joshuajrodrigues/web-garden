@@ -3,7 +3,7 @@ tags:
   - experiments
 title: Things I wanna do
 description: a bucket list of sorts
-hero: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Dreaming%2C_by_Jozef_Isra%C3%ABls.jpg/2560px-Dreaming%2C_by_Jozef_Isra%C3%ABls.jpg
+hero: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Dreaming%2C_by_Jozef_Isra%C3%ABls.jpg/2560px-Dreaming%2C_by_Jozef_Isra%C3%ABls.jpg"
 ---
 - use [[webmentions]]
 - make substack

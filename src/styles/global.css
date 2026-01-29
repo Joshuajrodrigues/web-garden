@@ -84,7 +84,7 @@ h2 {
 /* CODE BLOCKS -------------------------------------------------- */
 code {
     font-family: monospace; /* Ensures consistent width */
-    color: #fabd2f;
+    color: #ff4500;
     padding: 0.2em 0.4em;
     border-radius: 4px;
     font-size: 0.85em; /* Scaled relative to your body font */
@@ -97,7 +97,10 @@ pre {
     padding: 1.5em;
     border-radius: 8px;
     overflow: auto;
-    max-width: 700px;
+    max-width: 1200px;
+    code {
+        color: #bab696;
+    }
 }
 
 /* BLOCKQUOTE -------------------------------------------------- */
