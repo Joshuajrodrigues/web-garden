@@ -5,6 +5,7 @@ tags:
 title: VIB Research Ecosystem
 description: Reflections on building web apps to help scientists and researchers at VIB
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/FrancesHerdlingerByAndrewLoomis.jpg/1280px-FrancesHerdlingerByAndrewLoomis.jpg
+attrib: Frances Herdlinger (1930) by Andrew Loomis
 ---
 So, let’s talk about the **[Vlaams Instituut voor Biotechnologie (VIB)](https://en.wikipedia.org/wiki/Vlaams_Instituut_voor_Biotechnologie)**. It’s this massive, complex enterprise environment where you have super high-security data that needs to be accessible to all sorts of different people.
 

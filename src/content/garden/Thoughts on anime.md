@@ -4,7 +4,8 @@ tags:
   - rant
 title: Thoughts on anime
 description: Why these so called cartoons are possibly the last bastion of human art consumption
-hero: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kaneda_Kazuo_Katze_auf_dem_Pfirsichbaum.jpg/1280px-Kaneda_Kazuo_Katze_auf_dem_Pfirsichbaum.jpg
+hero: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Great_Wave_off_Kanagawa2.jpg/1280px-Great_Wave_off_Kanagawa2.jpg
+attrib: The Great Wave at Kanagawa. Designed by Hokusai
 ---
 I belive humans are extremely creative. And the testament to that creativity is right now in this day and age is anime.
 

@@ -44,4 +44,4 @@ I even got to touch a [[Logistics and Supply Chain App]] for the secure transpor
 ---
 ## Let's Connect
 
-If you want to nerd out about [[frontend architecture]], [[React patterns]], or [[the existential dread of building massive enterprise apps]], I’m your person. You can shoot me an email .
+If you want to nerd out about [[Frontend architecture]], [[React patterns]], or [[the existential dread of building massive enterprise apps]], I’m your person. You can shoot me an email .
