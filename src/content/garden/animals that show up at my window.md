@@ -48,6 +48,6 @@ I'm not a professional bird photographer and it'll show, I still enjoy watching 
 
 .gallery img {
   width: 100%;
-  border-radius: 8px;
+
 }
 </style>

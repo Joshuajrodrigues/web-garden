@@ -86,7 +86,7 @@ code {
     font-family: monospace; /* Ensures consistent width */
     color: #ff4500;
     padding: 0.2em 0.4em;
-    border-radius: 4px;
+
     font-size: 0.85em; /* Scaled relative to your body font */
     white-space: break-spaces;
 }
@@ -95,7 +95,7 @@ pre {
     background-color: #1d2021;
     color: #ebdbb2;
     padding: 1.5em;
-    border-radius: 8px;
+
     overflow: auto;
     max-width: 1200px;
     code {
