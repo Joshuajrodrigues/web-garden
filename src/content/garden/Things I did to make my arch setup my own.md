@@ -17,10 +17,10 @@ After a lot of practice and trial and error I managed to learn some basics of Li
 
 So in addition to the wiki setup, my arch has a few differences.
 
-1)  I use BTRFS file system over the default suggested ext4
-2) I have automatic timeshift setup for backups
-3)  By Arch is set up on an external SSD
-4) KDE desktop for customizations 
+The most prominent being that I use BTRFS file system over the default suggested ext4
+1) I have automatic timeshift setup for backups
+2)  By Arch is set up on an external SSD
+3) KDE desktop for customizations 
 
 ## BTRFS file system
 BTRFS (B-tree File System) is a modern Linux file system designed to replace ext4.
