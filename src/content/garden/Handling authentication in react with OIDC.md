@@ -24,7 +24,7 @@ I use the following libraries to help me integrate this:
 - react-oidc-context
 - zustand
 
-```
+```jsx
 // src/authConfig.ts
 import { AuthProviderProps } from "react-oidc-context";
 const HOST_URL = location.protocol + "//" + location.hostname + (location.port ? ":" + location.port : "");
@@ -42,7 +42,7 @@ export const oidcConfig: AuthProviderProps = {
 
 ```
  Since I like to use Zustand I will also keep a sync compoent to sync the context with the state manager
-```
+```jsx
 
 // src/components/AuthSync.tsx
 import { useEffect } from "react";
@@ -72,7 +72,7 @@ export const AuthSync = () => {
 ```
 In our Root, App.tsx we wrap the provider around the app
 
-```
+```jsx
 
 // src/App.tsx
 import { AuthProvider } from "react-oidc-context";
@@ -170,7 +170,7 @@ This optimizes the app architecturally and reduces dev time.
      
 -  <u>I want to log everything that happens in the OIDC library</u>
 
-      ```
+      ```jsx
        import { Log } from "oidc-client-ts"; 
        Log.setLogger(console); 
        Log.setLevel(Log.DEBUG);
