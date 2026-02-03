@@ -82,25 +82,38 @@ h2 {
     color: var(--text-secondary);
 }
 /* CODE BLOCKS -------------------------------------------------- */
-code {
-    font-family: monospace; /* Ensures consistent width */
-    color: #ff4500;
-    padding: 0.2em 0.4em;
-
-    font-size: 0.85em; /* Scaled relative to your body font */
-    white-space: break-spaces;
+/* The container (the background box) */
+pre {
+    padding: 1.5em;
+    /* Allows horizontal scroll if code is too long */
+    overflow-x: auto;
+    /* Ensures it never exceeds the screen width */
+    max-width: 100%;
+    border-radius: 8px;
+    /* Optional: Improves scrolling smoothness on iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
-pre {
-    background-color: #1d2021;
-    color: #ebdbb2;
-    padding: 1.5em;
+/* The actual text inside */
+pre code {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    /* Keeps code on one line unless you prefer wrapping */
+    white-space: pre;
+    /* Reset padding if it was being applied to inline code previously */
+    padding: 0;
+}
 
-    overflow: auto;
-    max-width: 1200px;
-    code {
-        color: #bab696;
-    }
+/* Optional: Targeted style for inline code (like `this`)
+   to distinguish it from large blocks */
+:not(pre) > code {
+    padding: 0.2em 0.4em;
+    font-size: 0.85em;
+    background-color: rgba(150, 150, 150, 0.1);
+    border-radius: 4px;
+    white-space: normal;
+    word-break: break-word;
 }
 
 /* BLOCKQUOTE -------------------------------------------------- */
