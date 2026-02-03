@@ -7,9 +7,11 @@ title: Design Systems & Component Architecture
 description: Reflections on building scalable UI patterns for enterprise-grade research ecosystems.
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/An_der_Ruegener_Kueste_-_Eugen_Bracht.jpg/1280px-An_der_Ruegener_Kueste_-_Eugen_Bracht.jpg
 ---
+
 So, here’s the thing about working in a massive research environment: the biggest boss battle isn’t actually building the UI. It’s trying to keep everything consistent when you have a million different fragmented data tools all doing their own thing.
 
 I spent a lot of my time taking a foundational UI library (**Ant Design**) and basically giving it superpowers. I had to extend it to support these high-data-density workflows that the base framework just wasn't prepared for.
+
 ## Key Architectural Focus Areas
 
 ### 1. Complex Document Orchestration
@@ -27,6 +29,7 @@ I also worked on a **Task Management service** that was basically designed to be
 - **The Pattern:** Instead of wasting time rebuilding task logic for every single app, we just treated the whole tasking system as its own standalone micro-app.
 
 - **The Result:** This included things like nested commenting systems, dynamic filtering, and dashboards that could just be dropped into different project environments.
+
 ### 3. High-Order Component (HOC) & Molecule Design
 
 I ended up developing these standardized patterns for the stuff that kept popping up in enterprise apps:
@@ -36,7 +39,8 @@ I ended up developing these standardized patterns for the stuff that kept poppin
 - **Data Visuals:** Making Kanban boards for tracking workflows (because everyone loves a good board).
 
 - **Unified IO:** Making sure that uploading and downloading files felt the same across every sub-app, so users didn't get confused.
-### 4. **Dynamic Data Templating:** 
+
+### 4. **Dynamic Data Templating:**
 
 I worked on these flexible UI patterns for **Custom Merge Fields**. This basically let users map dynamic data points into standardized document templates. I had to build interfaces that made managing these data placeholders feel intuitive, even for people who aren't tech-wizards.
 

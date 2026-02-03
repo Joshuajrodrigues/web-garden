@@ -7,7 +7,7 @@ description: lets setup our personal os
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Thomas_Cole_-_The_Voyage_of_Life_Childhood%2C_1842_(National_Gallery_of_Art).jpg/1280px-Thomas_Cole_-_The_Voyage_of_Life_Childhood%2C_1842_(National_Gallery_of_Art).jpg
 ---
 
-The arch wiki is pretty extensive on how to set up Arch Linux. 
+The arch wiki is pretty extensive on how to set up Arch Linux.
 
 You should always have the [Installation guide open in some tab during the learning process](https://wiki.archlinux.org/title/Installation_guide)
 
@@ -18,24 +18,31 @@ After a lot of practice and trial and error I managed to learn some basics of Li
 So in addition to the wiki setup, my arch has a few differences.
 
 The most prominent being that I use BTRFS file system over the default suggested ext4
-1) I have automatic timeshift setup for backups
-2)  By Arch is set up on an external SSD
-3) KDE desktop for customizations 
+
+1. I have automatic timeshift setup for backups
+2. By Arch is set up on an external SSD
+3. KDE desktop for customizations
 
 ## BTRFS file system
+
 BTRFS (B-tree File System) is a modern Linux file system designed to replace ext4.
 
 ### Why ?
--  **Snapshots** (undo system, like Time Machine) for timeshift
+
+- **Snapshots** (undo system, like Time Machine) for timeshift
 - **Subvolumes** (separate parts of the OS logically)
 - **Transparent compression** (compress=zstd saves space)
 - **Checksums for data integrity**
 - **Copy-on-write** (super fast snapshots, no block copying)
 - **Built-in RAID options**
 - **Great for rolling distros like Arch**
+
 ### Subvolumes
+
 Sub-volumes are like **mini independent file systems** _inside_ one big BTRFS filesystem.
+
 ### They are NOT like partitions.
+
 - No need to re partition your disk
 - No limits
 - You can create or delete them anytime
@@ -46,6 +53,7 @@ Sub-volumes are like **mini independent file systems** _inside_ one big BTRFS fi
 Because **snapshots work per-subvolume**.
 
 If you snapshot everything in one giant root filesystem:
+
 - your logs
 - caches
 - pacman cache
@@ -71,10 +79,9 @@ So we split things.
 
 as usually an update or new program will be installed at @. So i can just revert my system to a version that's not broken
 
-
 #### Instructions
-remember to umount /mnt
 
+remember to umount /mnt
 
 ```
 mount -o subvol=@,compress=zstd,noatime /dev/sda2 /mnt
@@ -87,9 +94,7 @@ mount -o subvol=@log,compress=zstd,noatime   /dev/sda2 /mnt/var/log
 mount -o subvol=@games,compress=zstd,noatime /dev/sda2 /mnt/var/games
 ```
 
-
 noatime is a **mount option** that tells Linux **not to update access-time metadata** every time a file is read.
-
 
 ## ssd in btrfs
 
@@ -101,11 +106,9 @@ noatime is a **mount option** that tells Linux **not to update access-time metad
 | space_cache=v2 | Modern free space map           | Faster mount, more reliable     |
 | discard=async  | TRIM in background              | Better SSD life, smooth deletes |
 
-
 ```
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id="ArchT7" --removable
 ```
-
 
 Removable is important:
 
@@ -123,6 +126,6 @@ Removable is important:
 
 ### Kde
 
-Finally I decided to install kde plasma for the desktop environment. As it provided a fine balance between complexity and customization. 
+Finally I decided to install kde plasma for the desktop environment. As it provided a fine balance between complexity and customization.
 
 At some point I'd like to switch to something like Wayland.

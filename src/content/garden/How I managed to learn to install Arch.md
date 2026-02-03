@@ -22,13 +22,14 @@ You should always have the [Installation guide open in some tab during the learn
 
 At first glance I found the wiki is almost in-compressible, and I consider myself a little of a tech expert.
 
-So I decided to change my approach. I watched YouTube videos on how to do it. 
+So I decided to change my approach. I watched YouTube videos on how to do it.
 
 > If you're installing arch it's best to install it referencing the arch wiki installation guide so you know what your doing. Specially if something breaks or is changed later. You know you are the one who put it there
 
-Buuuttttt, it's also good to watch as many videos as you can and read as many blogs as you can. And as you do practice all those setups in a virtual box, as a lot of these videos and write ups give you small tidbits of explanations. 
+Buuuttttt, it's also good to watch as many videos as you can and read as many blogs as you can. And as you do practice all those setups in a virtual box, as a lot of these videos and write ups give you small tidbits of explanations.
 
 The two videos I watched most were:
+
 - [Denshi Video's Comfy guide](https://youtu.be/68z11VAYMS8)
 - [bread on penguins guide](https://youtu.be/5DHz23VQJxk)
 
@@ -36,11 +37,11 @@ The two videos I watched most were:
 
 Just getting familiar and understanding the process through vocabulary helped me make sense of things.
 
-At this point I had installed Arch in the VM at least 8 times. 
+At this point I had installed Arch in the VM at least 8 times.
 
 The 9th time I installed it alone with the arch wiki. 🥳
 
-Annnnd I got stuck. But the 10th time. 
+Annnnd I got stuck. But the 10th time.
 
 It..... didn't work.
 
@@ -48,8 +49,8 @@ First it was due to forgetting to mount and second was due to forgetting to form
 
 The 11th time it worked correctly !
 
-I kept doing it multiple times after this point, Changing a few things here and there until [[Things I did to make my arch setup my own| I had my own custom installation of arch ]]
+I kept doing it multiple times after this point, Changing a few things here and there until [[Things I did to make my arch setup my own| I had my own custom installation of arch]]
 
-I don't think I'm expert at it yet. I think the next step for any Arch user would be to learn bash scripting and getting used to working in the terminal till they feel confident enough. 
+I don't think I'm expert at it yet. I think the next step for any Arch user would be to learn bash scripting and getting used to working in the terminal till they feel confident enough.
 
 And when I find myself efficient enough in the terminal I would like to make the jump to a window compositor like Wayland.

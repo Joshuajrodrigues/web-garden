@@ -6,6 +6,7 @@ title: Webmentions
 description: Cool new tech
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Wouter_Crabeth_%28II%29_-_Music_Making_Company.jpg/1280px-Wouter_Crabeth_%28II%29_-_Music_Making_Company.jpg
 ---
+
 Webmentions are basically the internet way of letting websites talk to each other without needing a middleman like Twitter or Facebook. Back in the day we had "pingbacks," but those were kind of clunky and prone to spam. Webmentions are the cooler and cleaner version of that.
 
 Imagine I write a post on my site and you really like it. Instead of leaving a comment on my page, you write a response on your own site and link to mine. Your website then sends a little "hey I mentioned you!" notification to my website. My site checks your link and sees that you actually did mention me. Then, poof, your comment or "like" shows up at the bottom of my post.

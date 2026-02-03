@@ -6,6 +6,7 @@ title: Logistics and Supply Chain App
 description: Reflections on building scalable Logistics and Supply Chain App
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Gustav_Klimt_046.jpg/960px-Gustav_Klimt_046.jpg
 ---
+
 So, on this project, I’ve basically been flying solo as the only Senior Front-end Developer. We’re building this super critical supply chain and logistics platform that tracks the movement of gold from Ghana.
 
 The whole point is to take the entire "chain of custody" and digitize it. We're trying to make things transparent and secure enough to stop smuggling and make sure every single regulation is followed. It’s high-stakes, to say the least.
@@ -14,7 +15,7 @@ The whole point is to take the entire "chain of custody" and digitize it. We're 
 
 For this one, I stepped up into a leadership role. I’m managing a team of junior developers and mentoring interns, which is a whole different kind of challenge.
 
-You can actually read more about my **[[challenges in hiring new candidates]]** and **[[mentoring in the age of ai ]]**.
+You can actually read more about my **[[challenges in hiring new candidates]]** and **[[mentoring in the age of ai]]**.
 
 - **Independent Ownership:** I’m the main point of contact for anything frontend. I coordinate directly with the backend teams and management to make sure we’re actually building what we said we’d build.
 

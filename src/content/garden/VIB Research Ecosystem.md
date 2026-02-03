@@ -7,13 +7,14 @@ description: Reflections on building web apps to help scientists and researchers
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/FrancesHerdlingerByAndrewLoomis.jpg/1280px-FrancesHerdlingerByAndrewLoomis.jpg
 attrib: Frances Herdlinger (1930) by Andrew Loomis
 ---
+
 So, let’s talk about the **[Vlaams Instituut voor Biotechnologie (VIB)](https://en.wikipedia.org/wiki/Vlaams_Instituut_voor_Biotechnologie)**. It’s this massive, complex enterprise environment where you have super high-security data that needs to be accessible to all sorts of different people.
 
 My job, working through **Onstro**, was to manage and scale a whole suite of interconnected web apps. Basically, I was trying to bridge the gap between "very intense scientific data" and "an interface that doesn't make you want to cry." I spent a lot of my energy making sure the code was efficient and that I was actually taking the initiative to move things forward.
 
 ## Technical Pillars of the Ecosystem
 
-###  Workflow & Data Collection Systems
+### Workflow & Data Collection Systems
 
 I helped build the frontend architecture for tools that automate data gathering and research management.
 
@@ -21,7 +22,7 @@ I helped build the frontend architecture for tools that automate data gathering 
 
 - **Workflow Orchestration:** I developed dashboards and guided task lists so everyone stays on the same page during those long, multi-stage processes, like trying to get funding or managing grants.
 
-###  Research Communication & Public Portals
+### Research Communication & Public Portals
 
 A huge part of the mission was just making scientific work... well, readable and accessible.
 
@@ -29,13 +30,14 @@ A huge part of the mission was just making scientific work... well, readable and
 
 - **Event & Access Systems:** I worked on scaling the ticketing and public-facing platforms so they wouldn't crash when they got hit with high-traffic interactions.
 
-###  Unified Access & Service Portals
+### Unified Access & Service Portals
 
 To fight off "app fatigue" (you know, when you have twenty different logins for twenty different things), we worked on a unified access portal. It’s like a central hub that ties all the different service providers together.
 
 - **Authentication & Navigation:** We followed a "few clicks away" philosophy. Basically, if it takes ten minutes to find what you need, we failed.
 
 - **Inter-app Integration:** I worked on the logic that lets data move securely and privately between different research tools without everything breaking.
+
 ---
 
 ## Core Frontend Contributions
