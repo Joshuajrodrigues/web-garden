@@ -8,6 +8,9 @@ import wikiLinkPlugin from "remark-wiki-link";
 // https://astro.build/config
 export default defineConfig({
   markdown: {
+    shikiConfig: {
+      theme: "gruvbox-dark-soft",
+    },
     remarkPlugins: [
       [
         wikiLinkPlugin,
