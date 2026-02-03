@@ -7,8 +7,8 @@ tags:
   - security
   - oidc
   - react
-title: Handling authentication in react the tradional way
-description: How do you do it without betterauth or a idp server ?
+title: Handling authentication in react with OIDC
+description: Oidc in react with context and zustand
 hero: https://upload.wikimedia.org/wikipedia/commons/f/f0/Guard_Grenadier_at_Eylau.jpg
 ---
 Oidc usually involves an identity server (IAM). Usually the intent is to build your own "Sign in with google".
