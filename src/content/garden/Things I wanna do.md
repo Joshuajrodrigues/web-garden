@@ -9,7 +9,7 @@ hero: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Dreaming%2C_by_
 - use [[webmentions]]
 - make substack
 - make sendtokobo
-- make [[CommonShelf]]
+- make [[Kindred]]
 - [[Making my game]]
 - write about csp
 - make a chip 8 emulator
