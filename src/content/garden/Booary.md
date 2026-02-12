@@ -1,5 +1,5 @@
 ---
-title: Decentralized protocol to share book list on personal websites - Kindred
+title: Decentralized protocol to share book list on personal websites - Booary
 tags:
   - experiments
   - hobby-project
@@ -46,9 +46,9 @@ e.g. joshuarodrigues.dev/library.json
     **Renders** your library, highlighting shared books with links to your friends' notes.
 
 ```jsx
-import { CommonShelf } from "./components/Kindred";
+import { CommonShelf } from "./components/Booary";
 
-<Kindred
+<Booary
 	myBooks={localJson}
 	friends={["https://example.com"]}
 	webring="https://kindred-webring.netlify.app/members.json"

@@ -16,7 +16,12 @@ Oh, and I also take pictures of **[[animals that show up at my window]]**.
 
 ## Read
 
-I’m currently reading **A Quiet Place by Seicho Matsumoto**. If you’re curious, you can check out **[[my previous reads]]** to see what I thought of them.
+I’m currently reading **A Quiet Place by Seicho Matsumoto**. 
+
+I maintain a public [library card](https://joshuarodrigues.dev/library) built on my [[Booary]] protocol
+
+If you’re curious, you can check out **[[my previous reads]]** to see what I thought of them.
+
 
 I also have a list of **[[notable reads and authors I like]]**.
 

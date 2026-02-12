@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/GardenPost.astro";
+
+import { LibraryCard } from "booary";
+
+const friends = ["https://akankshagajankar.com/library/card.json"];
+---
+
+<Layout
+    attrib="By Pseudo Roestraten"
+    hero="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Pseudo-Roestraten_-_Vanitas_Still_Life_with_Books%2C_Jugs%2C_a_Skull_and_Other_Objects_on_an_Table_Draped_with_an_Oriental_Carpet.jpg/1920px-Pseudo-Roestraten_-_Vanitas_Still_Life_with_Books%2C_Jugs%2C_a_Skull_and_Other_Objects_on_an_Table_Draped_with_an_Oriental_Carpet.jpg"
+    title="Library Card"
+    description="Books I've read"
+>
+    <LibraryCard client:load cardUrl="/library/card.json" friends={friends} />
+</Layout>

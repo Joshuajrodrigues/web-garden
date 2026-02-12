@@ -1,0 +1,14 @@
+{
+  "borrower": "Joshua",
+  "library": {
+    "name": "Boo Library",
+    "signature": "🐾"
+  },
+  "books": [
+    {
+      "key": "/works/OL38648331W",
+      "name": "Quiet Place",
+      "finishedDate": "12/2/2026"
+    }
+  ]
+}

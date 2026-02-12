@@ -5,6 +5,8 @@ import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import wikiLinkPlugin from "remark-wiki-link";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   markdown: {
@@ -26,7 +28,7 @@ export default defineConfig({
     ],
   },
   site: "https://beta.joshuarodrigues.dev",
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), react()],
   build: {
     format: "file", // This forces /404 to be 404.html
   },
