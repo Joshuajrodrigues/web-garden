@@ -30,8 +30,8 @@ importers:
         specifier: ^5.16.13
         version: 5.17.2(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.57.1)(typescript@5.9.3)
       booary:
-        specifier: 3.0.2
-        version: 3.0.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2))
+        specifier: 4.0.0
+        version: 4.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2))
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -1201,8 +1201,8 @@ packages:
     resolution: {integrity: sha512-ipDqC8FrAl/76p2SSWKSI+H9tFwm7vYqXQrItCuiVPt26Km0jS+NzSsBWAaBusvSbQcfJG+JitdMm+wZAgTYqg==}
     hasBin: true
 
-  booary@3.0.2:
-    resolution: {integrity: sha512-lF8VSWovLq3moFDN+jaC7B1ETWMfEeR4gQpZIXTO4ou4OwHDEsy7pkQ+phdpDPHytP5zJgJUR8CdKey1PkI7BQ==}
+  booary@4.0.0:
+    resolution: {integrity: sha512-XiM/CG5kgXff/k9XwulQ867rZN/eK+CW3vIWiVFKAXAc+75X/zYDlAGDoR2ux9X6pW030aU4HbPuSMskenFoUA==}
     hasBin: true
     peerDependencies:
       react: '>=18'
@@ -3636,7 +3636,7 @@ snapshots:
 
   baseline-browser-mapping@2.9.19: {}
 
-  booary@3.0.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2)):
+  booary@4.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2)):
     dependencies:
       '@tailwindcss/vite': 4.1.18(vite@6.4.1(jiti@2.6.1)(lightningcss@1.30.2))
       axios: 1.13.5
