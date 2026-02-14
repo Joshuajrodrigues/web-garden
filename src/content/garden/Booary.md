@@ -54,4 +54,4 @@ My friend and I can track our reading and what we have read in common or individ
 11. The friends part is optional.
 12. Below are some examples
 
-![Booary V1 Screenshot](http://localhost:4321/content/booary/booaryv1.png)
+![Booary V1 Screenshot](http://joshuarodrigues.dev/content/booary/booaryv1.png)
