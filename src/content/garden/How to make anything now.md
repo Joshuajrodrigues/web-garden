@@ -1,5 +1,5 @@
 ---
-title: How to make anything now ?
+title: How to make/build/learn anything anymore ?
 description: This goes out to anyone starting out and feeling lost and not confident
 tags:
   - rant
@@ -7,7 +7,11 @@ hero: https://mdl.artvee.com/sftb/406689mt.jpg
 attrib: A Student Conducted to Minerva (1775) by Antonio Zucchi
 ---
 
-Do not find easy answers. Do not trust words you do not know. Ideas that aren't yours. Do not chase solutions to problems that don't exist, or sell your solution to people who don't have your problems.
+Do not find easy answers. 
+
+Do not trust words you do not know. Ideas that aren't yours. 
+
+Do not chase solutions to problems that don't exist, or sell your solution to people who don't have your problems.
 
 Do not make it for money, make it because you can.
 
@@ -16,7 +20,8 @@ Do not make it for money, make it because you can.
 Do not confine yourself to your field. Consult art, music, movies, books they will all provide inspiration.
 
 Enjoy not knowing and making mistakes, enjoy tumbling down rabbit hole of information, discovering ancient cryptic blogs of solutions to problems that aren't even remotely similar to yours. A breadcrumb trail to finding the right answer will form.
-Answers that will be shot-down by your own self, sometimes rightfully so, as they will be wrong. But don't you worry, you'll get the correct one. Not that day, but you'll know why you were wrong, and soon run out of being wrong.
+
+Answers that will be shot-down by your own self, sometimes rightfully so, as they will be wrong. But do not worry, you'll soon run out of being wrong.
 
 Enjoy being the worst at what your doing, that moment wont last forever.
 
