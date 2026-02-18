@@ -23,7 +23,7 @@ I maintain a public [library card](https://joshuarodrigues.dev/library) built on
 If you’re curious, you can check out **[[my previous reads]]** to see what I thought of them.
 
 
-I also have a list of **[[notable reads and authors I like]]**.
+I also have a list of **[[books i want to read]]**.
 
 ## Anime
 
