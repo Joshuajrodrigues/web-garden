@@ -14,16 +14,16 @@
 }
 
 @font-face {
-    font-family: "LouizeDisplay";
-    src: url("/fonts/LouizeDisplay.woff2") format("woff2");
+    font-family: "Zodiak-Variable";
+    src: url("/fonts/Zodiak-Variable.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: fallback;
 }
 
 @font-face {
-    font-family: "PPNeueMontreal";
-    src: url("/fonts/PPNeueMontreal.woff2") format("woff2");
+    font-family: "Satoshi-Variable";
+    src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: fallback;
@@ -31,7 +31,7 @@
 
 /* BODY -------------------------------------------------- */
 body {
-    font-family: "PPNeueMontreal", Helvetica, Arial, sans-serif;
+    font-family: "Satoshi-Variable", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: left;
@@ -47,15 +47,15 @@ body {
 /* HEADINGS -------------------------------------------------- */
 
 .fancy-font {
-    font-family: "LouizeDisplay", "Times New Roman", Times, serif;
+    font-family: "Zodiak-Variable", "Times New Roman", Times, serif;
 }
 
 .runny-font {
-    font-family: "LouizeDisplay", "Times New Roman", Times, serif;
+    font-family: "Zodiak-Variable", "Times New Roman", Times, serif;
 }
 
 .title-font {
-    font-family: "LouizeDisplay", "Times New Roman", Times, serif;
+    font-family: "Zodiak-Variable", "Times New Roman", Times, serif;
 }
 
 .xl {
