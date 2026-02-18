@@ -8,13 +8,15 @@ hero: https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Utro_v_sosnovom_
 
 ## Life
 
-Right now, I am focusing on building a cool place for myself on the internet—a little corner for all my thoughts and rants. I’ve also decided to actually take exercise seriously, so I’ve been hitting the weights and going out for jogs.
+Currently I try to exercise and read as much as I can. I'm working on making small games during my free time.
 
-I’m also planning to pick up cooking some cool new dishes soon, and I’ll be adding those recipes over at /food.
+I love cooking, and I’ll be adding those recipes over at /food as soon as I find time. 
 
 Oh, and I also take pictures of **[[animals that show up at my window]]**.
 
 ## Read
+
+[[books and reading|Reading is an integral part if my life]]
 
 I’m currently reading **A Quiet Place by Seicho Matsumoto**. 
 
@@ -33,7 +35,7 @@ I am currently watching **Frieren: Beyond Journey's End**. It’s so good.
 
 Lately, I’ve been listening to **Ego Death at a Bachelorette Party** by Hayley Williams on repeat.
 
-Check out **[[my favorite music]]**.
+
 
 ## Movies
 
