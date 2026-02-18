@@ -3,7 +3,7 @@ title: Small postulates before you make a thing and think a thing
 description: Too much is built and thought with no regards to benefit and harm it may create for you and others
 tags:
   - rant
-hero: joshuarodrigues.dev/content/note-imgs/A Student Conducted to Minerva (1775) by Antonio Zucchi.jpg
+hero: https://joshuarodrigues.dev/content/note-imgs/A Student Conducted to Minerva (1775) by Antonio Zucchi.jpg
 attrib: A Student Conducted to Minerva (1775) by Antonio Zucchi
 ---
 
