@@ -8,6 +8,7 @@ hero: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Alexander_of_mac
 attrib: Alexander the Great and physician Philip of Acarnania by Henryk Siemiradzki
 ---
 Check out my [library card](https://joshuarodrigues.dev/library)
+
 Check out the [[books i want to read]]
 
 ---

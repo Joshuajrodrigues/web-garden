@@ -13,6 +13,11 @@ const posts = await getCollection("garden");
             posts.map((post) => (
                 <li class="blog-post ">
                     <a href={"/garden/" + post.id}>{post.data.title}</a>
+                    <div>
+                        {post.data.tags?.map((tag) => (
+                            <span class="tag">#{tag} </span>
+                        ))}
+                    </div>
                 </li>
             ))
         }
@@ -70,7 +75,10 @@ const posts = await getCollection("garden");
         height: auto;
         opacity: 0.9;
     }
-
+    .tag {
+        font-size: 13px;
+        margin-right: 8px;
+    }
     /* Desktop enhancement */
     @media (min-width: 768px) {
         .blog-tease {

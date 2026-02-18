@@ -29,9 +29,6 @@ I also have a list of **[[books i want to read]]**.
 
 I am currently watching **Frieren: Beyond Journey's End**. It’s so good.
 
-- **[[Anime I wanna watch]]**
-- **[[Notable past anime I've watched]]**
-
 ## Music
 
 Lately, I’ve been listening to **Ego Death at a Bachelorette Party** by Hayley Williams on repeat.
