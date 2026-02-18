@@ -1,9 +1,9 @@
 ---
-title: How to make/build/learn anything anymore ?
-description: This goes out to anyone starting out and feeling lost and not confident
+title: Small postulates before you make a thing and think a thing
+description: Too much is built and thought with no regards to benefit and harm it may create for you and others
 tags:
   - rant
-hero: https://mdl.artvee.com/sftb/406689mt.jpg
+hero: joshuarodrigues.dev/content/note-imgs/A Student Conducted to Minerva (1775) by Antonio Zucchi.jpg
 attrib: A Student Conducted to Minerva (1775) by Antonio Zucchi
 ---
 
