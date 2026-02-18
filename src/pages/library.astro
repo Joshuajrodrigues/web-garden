@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/GardenPost.astro";
 
-import "booary/dist/index.css";
 const friends = ["https://www.akankshagajankar.com/library/card.json"];
 ---
 
@@ -16,5 +15,7 @@ const friends = ["https://www.akankshagajankar.com/library/card.json"];
     </script>
     <x-library-card
         cardlink="/library/card.json"
-        friends={JSON.stringify(friends)}></x-library-card>
+        friends={JSON.stringify(friends)}
+    >
+    </x-library-card>
 </Layout>

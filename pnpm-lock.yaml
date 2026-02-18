@@ -30,8 +30,8 @@ importers:
         specifier: ^5.16.13
         version: 5.17.2(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.57.1)(typescript@5.9.3)
       booary:
-        specifier: 6.0.2
-        version: 6.0.2
+        specifier: ^8.0.1
+        version: 8.0.1
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -1113,8 +1113,9 @@ packages:
     resolution: {integrity: sha512-ipDqC8FrAl/76p2SSWKSI+H9tFwm7vYqXQrItCuiVPt26Km0jS+NzSsBWAaBusvSbQcfJG+JitdMm+wZAgTYqg==}
     hasBin: true
 
-  booary@6.0.2:
-    resolution: {integrity: sha512-uqEzvxPP7Yf3pJJUj+IAladL24Viq3izfuQ2zJzl4NWzQ1gcf/wzs8gT1FPsdXX0z4uSmhp/653lNzFkHopXcg==}
+  booary@8.0.1:
+    resolution: {integrity: sha512-SLZMDvUnTCvA3dS59YKffS+NMJq2COhm1/8NCMYd4C7GUcuB6zOFWSJzw/vW275wtbXuwiXAuPHSHshxSJgiEA==}
+    hasBin: true
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
@@ -3491,7 +3492,7 @@ snapshots:
 
   baseline-browser-mapping@2.9.19: {}
 
-  booary@6.0.2:
+  booary@8.0.1:
     dependencies:
       '@types/fs-extra': 11.0.4
       axios: 1.13.5

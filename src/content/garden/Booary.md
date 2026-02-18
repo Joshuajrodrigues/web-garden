@@ -8,50 +8,86 @@ description: Decentralized protocol to share book list and reading notes amoung 
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Isaac_Cruikshank_-_The_Lending_Library_-_B1975.4.867_-_Yale_Center_for_British_Art.jpg/1280px-Isaac_Cruikshank_-_The_Lending_Library_-_B1975.4.867_-_Yale_Center_for_British_Art.jpg
 attrib: The Lending Library by Isaac Cruikshank
 ---
-## Development Updates:
-- MVP developed on 9th Feb.
-- Version 1.0.0 tested on 11th Feb
-- Version 4.0.0 (public) released on 12th Feb
-- Ui finalization and protocol finalization pending
 
-## What It Is
- **Booary** is a digital Library card. 
- 
- It lets you publicly display the books you read per year in a card component on your site and optionally, keeps track on If you're friends have read the same book as you.
- 
- It does this by providing two things. 
- 1) A CLI to add and maintain the book info
- 2) A react component that shows the card with details
+# Booary
 
-## Why Does this Exist
-**FUN**
-My friend and I can track our reading and what we have read in common or individually without the need for external pollutants that demand unnecessary information or provide unnecessary features.
-## How It Works
+Booary is a web component designed to display a reading history in the style of a vintage library card. It uses a JSON file as a database and supports yearly archiving and friend cross-referencing.
+Usage
 
-1. We agree to a JSON object structure, the CLI tool helps generate this.
-2. Install booary with `pnpm add booary`
-3. Run `pnpm booary`. This will begin creating the JSON file at `public/library/card.json` by default.
-4. Enter your Name, library name, library stamp.
-5. Search for a book you have read/reading.
-6. Select from the list, and set read or reading, if read type in date, default will be current date.
-7. You can modify the data of this JSON, but I would advise to keep the structure same, (unless you want to modify the card, use your own card). 
-8. Import `LibraryCard` from `import { LibraryCard } from "booary";`
-9. ```jsx
-   import { LibraryCard } from "booary";
-   
-   const friends = ["https://www.akankshagajankar.com/library/card.json"];
-   
-   return(
-     <LibraryCard 
-	     cardUrl="/library/card.json" 
-	     friends={friends} 
-     />
-   )
- 
-   ```
-   
-10. Above, the friends is the domains that belong to your friends. This will show their library stamps next to the book you and they have in common. This will also take you to their site/card on click.
-11. The friends part is optional.
-12. Below are some examples
+1. Installation
 
-![Booary V1 Screenshot](http://joshuarodrigues.dev/content/booary/booaryv1.png)
+Include the library via CDN in your HTML or Astro project:
+
+```HTML
+
+<script src="https://unpkg.com/booary"></script>
+```
+
+2. Implementation
+
+Place the custom element in your code. It requires a link to your local data and can optionally accept an array of friend URLs.
+
+```HTML
+<x-library-card
+  cardlink="/library/card.json"
+  friends='["https://friend-site.com/library/card.json"]'>
+</x-library-card>
+```
+
+<x-library-card 
+  cardlink="/library/card.json" 
+  friends='["https://friend-site.com/library/card.json"]'>
+</x-library-card>
+
+### The CLI
+
+The package includes a command-line interface to manage your library without manual JSON editing.
+
+To run the CLI:
+
+```Bash
+
+pnpm booary
+```
+
+### Functionality:
+
+Initialization: Configures your borrower name and library name on the first run.
+
+Book Search: Queries the Open Library API to find book details.
+
+Automatic Archiving: New books are filed under the current year. If a year does not exist in your history, the CLI creates it.
+
+### Features:
+
+Yearly Navigation: Toggle between different years using the navigation arrows to view historical reading data.
+
+Social Discovery: If a friend in your list has read the same book in the same year, their librarian signature will appear next to that book on your card.
+
+Encapsulated Design: Built as a standard Web Component that works across all modern browsers and frameworks.
+
+### Data Structure
+
+The card.json file is organized by years to allow for historical browsing.
+
+```JSON
+
+{
+  "borrower": "User Name",
+  "library": {
+    "name": "Library Name",
+    "signature": "JS"
+  },
+  "years": {
+    "2025": [
+      {
+        "key": "/works/OL12345W",
+        "name": "Book Title",
+        "author": "Author Name",
+        "finishedDate": "01/01/2025"
+      }
+    ],
+    "2026": []
+  }
+}
+```
