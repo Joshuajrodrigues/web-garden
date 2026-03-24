@@ -23,7 +23,7 @@ https://github.com/Joshuajrodrigues/Boomodoro
 
 And then I was like, I need to build a desktop app. My friend showed me a cute app made in electronJS. 
 
-Im not a big fan on electronJS, so I used tauri and rust to build
+I'm not a big fan on electronJS, so I used tauri and rust to build
 
 https://github.com/Joshuajrodrigues/sleepu
 

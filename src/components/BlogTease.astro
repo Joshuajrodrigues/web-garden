@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import tolstoy from "../images/logo2.jpg";
 import { Image } from "astro:assets";
 const posts = await getCollection("garden");
+const randomPosts = posts.sort(() => Math.random() - 0.5);
 ---
 
 <h2 class="section-title runny-font">Notes and musings</h2>
@@ -10,7 +11,7 @@ const posts = await getCollection("garden");
 <section class="blog-tease">
     <ol class="post-list">
         {
-            posts.map((post) => (
+            randomPosts.map((post) => (
                 <li class="blog-post ">
                     <a href={"/garden/" + post.id}>{post.data.title}</a>
                     <div>

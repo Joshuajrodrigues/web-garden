@@ -20,7 +20,6 @@ Oh, and I also take pictures of **[[animals that show up at my window]]**.
 
 ## Read
 
-[[books and reading|Reading is an integral part if my life]]
 
 I’m currently reading **A Quiet Place by Seicho Matsumoto**, and
 **Gravity's Rainbow by Thomas Pynchon**
@@ -46,7 +45,7 @@ Lately, I’ve been listening to **Ego Death at a Bachelorette Party** by Hayley
 
 I recently watched **28 Years Later**. I think it was cool.
 
-Here are **[[my favorite movies]]**.
+
 
 ## Work
 
