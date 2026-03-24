@@ -4,11 +4,15 @@ tags:
 title: What am I doing right now ?
 description: My current obsessions and pass time
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Utro_v_sosnovom_lesu.jpg/1280px-Utro_v_sosnovom_lesu.jpg
+date updated: 24-3-2026
 ---
 
 ## Life
 
-Currently I try to exercise and read as much as I can. I'm working on making small games during my free time.
+Currently I'm learning [[Rust]], the programming language and read as much as I can. 
+I've grown fond of the esp32 micro - controllers and will add some small projects in here soon.
+
+I'm working on making small games during my free time.
 
 I love cooking, and I’ll be adding those recipes over at /food as soon as I find time. 
 
@@ -18,7 +22,8 @@ Oh, and I also take pictures of **[[animals that show up at my window]]**.
 
 [[books and reading|Reading is an integral part if my life]]
 
-I’m currently reading **A Quiet Place by Seicho Matsumoto**. 
+I’m currently reading **A Quiet Place by Seicho Matsumoto**, and
+**Gravity's Rainbow by Thomas Pynchon**
 
 I maintain a public [library card](https://joshuarodrigues.dev/library) built on my [[Booary]] protocol
 
