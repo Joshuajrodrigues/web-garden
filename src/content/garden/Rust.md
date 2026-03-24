@@ -4,7 +4,7 @@ description: A fresh start at prgramming
 tags:
   - hobby-project
   - experiments
-hero: https://joshiarodrigues.dev/content/note-imgs/childrenplayingrevolution.jpg
+hero: https://joshuarodrigues.dev/content/note-imgs/childrenplayingrevolution.jpg
 aliases:
   - Children playing revolution by Anonymous
 ---
