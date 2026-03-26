@@ -30,3 +30,5 @@ I'm not a big fan on electronJS, so I used tauri which is based on rust and prea
 
 
 An app that turns off you laptop after an interval you set, useful to shut down your pc once you fall asleep listening to youtube or music.
+
+After this the ESP 32 caught my eye and I moved on to make a simple [[Morse code emitter]] with it
