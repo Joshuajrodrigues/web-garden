@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Circuit Diagram, cdlibrary.dll 4.0.0.0 -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" width="960" height="660" xmlns="http://www.w3.org/2000/svg">
-	<line x1="920" y1="320" x2="920" y2="325" style="stroke:rgb(0, 0, 0);stroke-linecap:square;stroke-width:2" />
-	<path d="M 920,325 L 923,325 L 920,330 L 917,325 L 920,325" style="fill-opacity:1;fill:rgb(0, 0, 0);stroke:rgb(0, 0, 0);stroke-linecap:square;stroke-width:2" />
-	<text x="912" y="325" style="font-family:Arial;font-size:11px;text-anchor:end" dominant-baseline="middle" transform="rotate(0, 912, 325)"></text>
+<svg version="1.1" width="580" height="660" xmlns="http://www.w3.org/2000/svg">
 	<line x1="40" y1="480" x2="40" y2="465" style="stroke:rgb(0, 0, 0);stroke-linecap:square;stroke-width:2" />
 	<path d="M 40,465 L 43,465 L 40,460 L 37,465 L 40,465" style="fill-opacity:1;fill:rgb(0, 0, 0);stroke:rgb(0, 0, 0);stroke-linecap:square;stroke-width:2" />
 	<text x="32" y="470" style="font-family:Arial;font-size:11px;text-anchor:end" dominant-baseline="middle" transform="rotate(0, 32, 470)"></text>
