@@ -15,9 +15,14 @@ attrib: '"Light" layer on "Wall", oil-envelope, 4,5x23 metres, CCA Winzavod, Mos
 - 1x micro USB to USB connector
 - 1MB102 830 pin Breadboard
 - 1x RGY / RGB light (Common anode)
-- 1x Register
+- 1x Register( 220Ohm)
 - Jumper wires
 - 2x Rubber bands (optional)
+
+## Setup
+- - [https://docs.espressif.com/projects/rust/book/getting-started/toolchain.html](https://docs.espressif.com/projects/rust/book/getting-started/toolchain.html)
+-  [https://esp32.implrust.com/](https://esp32.implrust.com/)
+- Follow the guides to setup your env
 
 ## Circuit
 ![morse.svg|250](https://joshuarodrigues.dev/content/note-imgs/morse.svg)
@@ -28,8 +33,7 @@ attrib: '"Light" layer on "Wall", oil-envelope, 4,5x23 metres, CCA Winzavod, Mos
 - The unit is powered my micro USB.
 - I used only 2 of the colors from the led, red for "-" and green for "."
 - Special chars were not handled. 
-- - [https://esp32.implrust.com/](https://esp32.implrust.com/)
-- [https://docs.espressif.com/projects/rust/book/getting-started/toolchain.html](https://docs.espressif.com/projects/rust/book/getting-started/toolchain.html)
+
 
 
 
@@ -166,6 +170,8 @@ fn toggle_wait(duration: u64) {
 
 
 ```
+
+- Flash with Cargo run
 ## Github
 
 https://github.com/Joshuajrodrigues/rust-esp32-morse-code
