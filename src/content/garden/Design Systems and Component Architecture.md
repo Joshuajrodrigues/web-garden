@@ -3,49 +3,113 @@ tags:
   - work
   - experiments
   - work-project
-title: Design Systems & Component Architecture
-description: Reflections on building scalable UI patterns for enterprise-grade research ecosystems.
+title: Micro-Frontend Architecture & Shared Dependencies
+description: Notes on scaling from UMD to Webpack Module Federation, handling singletons, and managing cross-app state.
 hero: https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/An_der_Ruegener_Kueste_-_Eugen_Bracht.jpg/1280px-An_der_Ruegener_Kueste_-_Eugen_Bracht.jpg
 ---
 
-So, here’s the thing about working in a massive research environment: the biggest boss battle isn’t actually building the UI. It’s trying to keep everything consistent when you have a million different fragmented data tools all doing their own thing.
+Designing a micro-frontend architecture requires balancing team autonomy with browser performance. The core challenge is preventing massive bundle sizes and brittle code when independent applications share the same interface.
 
-I spent a lot of my time taking a foundational UI library (**Ant Design**) and basically giving it superpowers. I had to extend it to support these high-data-density workflows that the base framework just wasn't prepared for.
+## 1. The Baseline: UMD & Custom Elements
 
-## Key Architectural Focus Areas
+**The Approach:** Exporting a widget as a UMD build and attaching it to the global `window`, or wrapping it in a Custom Element (like `<vib-forms>`) to encapsulate the DOM mounting.
 
-### 1. Complex Document Orchestration
+**The Code:**
+```
+// App A (Remote): webpack.config.js
+module.exports = {
+  // Externalizing React prevents bundling it, expecting it globally
+  externals: { react: 'React', 'react-dom': 'ReactDOM' }
+};
 
-I spent a _significant_ amount of time wrestling with **Rich Text Editing (RTE)** frameworks like **CKEditor** and **ProseMirror**.
+<!-- App B (Host): index.html -->
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="http://localhost:3001/widget.umd.js"></script>
+```
+**The Problem:**
+1. **Global Namespace Pollution:** Relying on `window.React` is brittle.
+2. **Strict Version Coupling:** Both apps must use the exact same globally loaded React version.
+3. **Bundle Bloat:** If Custom Elements bundle their own dependencies to avoid global tags, users download the same libraries multiple times.
 
-- **The Mission:** Customizing these open-source editors to handle very specific plugin requirements and custom toolbars.
+## 2. The Solution: Webpack Module Federation
 
-- **The Goal:** Trying to create a smooth "what you see is what you get" experience while still following the super-strict data standards that scientific documentation demands. It's a delicate balance.
+**The Approach:** Shift dependency resolution to Webpack at runtime. The host and remote negotiate shared singletons to prevent duplication.
 
-### 2. Micro-Frontend Service Integration
+**The Code:**
+```
+// App A & App B: webpack.config.js
+const deps = require('./package.json').dependencies;
 
-I also worked on a **Task Management service** that was basically designed to be a "plug-and-play" module.
+module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      name: 'app',
+      shared: {
+        react: { singleton: true, requiredVersion: deps.react },
+        'react-dom': { singleton: true, requiredVersion: deps['react-dom'] },
+      },
+    }),
+  ],
+};
 
-- **The Pattern:** Instead of wasting time rebuilding task logic for every single app, we just treated the whole tasking system as its own standalone micro-app.
+// App B (Host): Consuming the Remote
+import React, { Suspense } from 'react';
 
-- **The Result:** This included things like nested commenting systems, dynamic filtering, and dashboards that could just be dropped into different project environments.
+const RemoteWidget = React.lazy(() => import('appA/Widget'));
 
-### 3. High-Order Component (HOC) & Molecule Design
+export const App = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <RemoteWidget/>
+  </Suspense>
+);
+```
+**The Trade-offs (New Problems):**
+1. **Network Waterfalls:** The browser must parse the host application, fetch `remoteEntry.js`, and then fetch the widget chunk.
+2. **Type Safety:** Requires specialized plugins like `@module-federation/typescript` to extract and share `.d.ts` files across repositories.
+3. **Runtime Crashes:** Version mismatches in singletons fail in the browser, not at build time.
 
-I ended up developing these standardized patterns for the stuff that kept popping up in enterprise apps:
+## 3. Design Systems & Shared Dependencies
 
-- **Smart Search:** Autocomplete components that could actually handle data coming from multiple sources at once.
+**The Problem:** Exposing individual UI components (like an Ant Design Button) as federated remotes requires verbose `React.lazy` wrappers everywhere. This ruins the developer experience.
 
-- **Data Visuals:** Making Kanban boards for tracking workflows (because everyone loves a good board).
+**The Solution:** Publish the design system as a standard NPM package and add it to the Webpack `shared` scope.
 
-- **Unified IO:** Making sure that uploading and downloading files felt the same across every sub-app, so users didn't get confused.
+**The Code:**
+```
+// App A & B: webpack.config.js
+shared: {
+  antd: { singleton: true, requiredVersion: deps.antd }
+}
 
-### 4. **Dynamic Data Templating:**
+// App A (Remote): Clean, synchronous imports
+import { Button } from 'antd';
+```
+Webpack intercepts the standard import at runtime and uses the host application's already-loaded instance of `antd`. 
 
-I worked on these flexible UI patterns for **Custom Merge Fields**. This basically let users map dynamic data points into standardized document templates. I had to build interfaces that made managing these data placeholders feel intuitive, even for people who aren't tech-wizards.
+## 4. Cross-App Communication
 
-## Technical Philosophy
+**The Problem:** Passing callbacks as props creates a strict runtime contract. Because you lose build-time type safety across federated boundaries, a changed prop name in the remote app will cause a silent failure in the host app.
 
-- **Modular Distribution:** To keep everything in sync across multiple repositories, I used **Git submodules**. It helped ensure everyone got real-time updates even when the development cycle was moving way too fast.
+**The Bad Code:**
+```
+// Tightly coupled and prone to silent runtime failures
+<RemoteLoginWidget onLoginSuccess={(user) => setUser(user)} />
+```
+**The Solution:** Use the browser native `CustomEvent` API for a decoupled publish and subscribe model. The remote broadcasts data, and the host listens if it needs to.
 
-- **[[UX for Non-Technical Users]]**: At the end of the day, my focus was on making these high-security, heavy-duty applications actually easy to use. I wanted to make sure that anyone from a student to a senior researcher, could hop in and get their work done without a headache.
+**The Good Code:**
+```
+// App A (Remote): Dispatching the event
+const loginEvent = new CustomEvent('auth:login-success', { 
+  detail: { id: 1, name: 'Joshua' } 
+});
+window.dispatchEvent(loginEvent);
+
+// App B (Host): Listening for the event
+useEffect(() => {
+  const handleUserLogin = (event) => setUser(event.detail);
+  
+  window.addEventListener('auth:login-success', handleUserLogin);
+  return () => window.removeEventListener('auth:login-success', handleUserLogin);
+}, []);
+```
