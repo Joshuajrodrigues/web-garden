@@ -150,3 +150,13 @@ To fix this:
   2. If resizedIndex < startIndex (the item lives above the visible window), add deltaHeight directly to scrollTop.
 
 Pushing scrollTop down by the exact amount the content grew keeps the visible cards locked in place without screen jumping.
+
+
+## Code Sandbox
+
+<iframe  loading="lazy" src="https://codesandbox.io/embed/hkthdv?view=editor+%2B+preview&module=%2Fsrc%2FApp.tsx&hidenavigation=1"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="virtual-list-react"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
