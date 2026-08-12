@@ -11,18 +11,9 @@ attrib: Tower of Babel (1563) by Pieter Bruegel the Elder
 
 ### System Design
 
-[[State Management Taxonomy]]
-[[SPA Folder structure]]
-[[Micro-Frontends (MFE) Architecture]]
-[[Handling Role Based Permissions]]
+- [[Virtualization]]
+- [[Design Systems And Component Architecture]]
 
 ### Authentication
 
-[[Handling authentication in react with OIDC]]
-[[Content Security Policy (CSP) for SPAs]]
-
-### Performance
-
-[[Island Architecture vs. Hydration]]
-[[Webpack]]
-[[Vite]]
+- [[Handling authentication in react with OIDC]]
