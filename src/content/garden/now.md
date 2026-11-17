@@ -9,20 +9,16 @@ date updated: 24-3-2026
 
 ## Life
 
-Currently I'm learning [[Rust]], the programming language and read as much as I can. 
+Currently I'm learning Docker to Self host on a hetzer VPS, and read as much as I can. 
 I've grown fond of the esp32 micro - controllers and will add some small projects in here soon.
 
-I'm working on making small games during my free time.
-
-I love cooking, and I’ll be adding those recipes over at /food as soon as I find time. 
 
 Oh, and I also take pictures of **[[animals that show up at my window]]**.
 
 ## Read
 
 
-I’m currently reading **A Quiet Place by Seicho Matsumoto**, and
-**Gravity's Rainbow by Thomas Pynchon**
+I’m currently reading **Anarchy by William Dalrympee**
 
 I maintain a public [library card](https://joshuarodrigues.dev/library) built on my [[Booary]] protocol
 

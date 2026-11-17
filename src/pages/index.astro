@@ -34,6 +34,29 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 </p>
                 <a href="/garden/now">Here's what I'm doing now</a>
             </article>
+            <section class="sudden-update">
+                <p>
+                    I'm in the process of self hosting a bunch of my sites and
+                    projects.
+                </p>
+                <p>Hence this site is messier than usual</p>
+                <p>
+                    <b>but i love it</b>
+                </p>
+                <p>
+                    check out{" "}
+                    <a href="https://notes.joshuarodrigues.dev/explore?filter=tagSearch%3Aselfhostingseries">
+                        my musings and experience while I learn self hosting
+                    </a>
+                </p>
+                <p>
+                    and for my more up todate notes{" "}
+                    <a href="https://notes.joshuarodrigues.dev">
+                        you can check out my entire self hosted memos instance.
+                    </a>
+                </p>
+            </section>
+
             <BlogTease />
 
             <Footer />
@@ -49,5 +72,27 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     }
     h2 {
         font-size: clamp(2.5rem, 8vw, 3.4rem);
+    }
+    .sudden-update {
+        margin-top: 12px;
+        border: 4px dashed black;
+        width: fit-content;
+        padding: 12px;
+        background-color: #ff4500;
+        color: white;
+        font-weight: bolder;
+        a {
+            color: #f6aee1;
+            display: inline-block;
+            animation: slowHueShift 2s linear infinite;
+        }
+    }
+    @keyframes slowHueShift {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
     }
 </style>
